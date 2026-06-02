@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="436" viewBox="0 0 1900 436">
+<rect width="100%" height="100%" fill="white"/>
+<text x="950.00" y="22.00" font-size="16" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">Schedule and Data Routes, makespan=320</text>
+<rect x="70" y="38" width="1800" height="340" fill="#f8fafc" stroke="#cbd5e1"/>
+<line x1="70.00" y1="38" x2="70.00" y2="378" stroke="#e2e8f0"/>
+<line x1="70.00" y1="378" x2="70.00" y2="383" stroke="#334155"/>
+<text x="70.00" y="398.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">0</text>
+<line x1="351.25" y1="38" x2="351.25" y2="378" stroke="#e2e8f0"/>
+<line x1="351.25" y1="378" x2="351.25" y2="383" stroke="#334155"/>
+<text x="351.25" y="398.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">50</text>
+<line x1="632.50" y1="38" x2="632.50" y2="378" stroke="#e2e8f0"/>
+<line x1="632.50" y1="378" x2="632.50" y2="383" stroke="#334155"/>
+<text x="632.50" y="398.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">100</text>
+<line x1="913.75" y1="38" x2="913.75" y2="378" stroke="#e2e8f0"/>
+<line x1="913.75" y1="378" x2="913.75" y2="383" stroke="#334155"/>
+<text x="913.75" y="398.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">150</text>
+<line x1="1195.00" y1="38" x2="1195.00" y2="378" stroke="#e2e8f0"/>
+<line x1="1195.00" y1="378" x2="1195.00" y2="383" stroke="#334155"/>
+<text x="1195.00" y="398.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">200</text>
+<line x1="1476.25" y1="38" x2="1476.25" y2="378" stroke="#e2e8f0"/>
+<line x1="1476.25" y1="378" x2="1476.25" y2="383" stroke="#334155"/>
+<text x="1476.25" y="398.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">250</text>
+<line x1="1757.50" y1="38" x2="1757.50" y2="378" stroke="#e2e8f0"/>
+<line x1="1757.50" y1="378" x2="1757.50" y2="383" stroke="#334155"/>
+<text x="1757.50" y="398.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">300</text>
+<line x1="1870.00" y1="38" x2="1870.00" y2="378" stroke="#e2e8f0"/>
+<line x1="1870.00" y1="378" x2="1870.00" y2="383" stroke="#334155"/>
+<text x="1870.00" y="398.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">320</text>
+<line x1="70" y1="378.00" x2="1870" y2="378.00" stroke="#e2e8f0"/>
+<line x1="65" y1="378.00" x2="70" y2="378.00" stroke="#334155"/>
+<text x="60.00" y="382.00" font-size="11" font-family="Arial, sans-serif" text-anchor="end" font-weight="400" fill="#111827">0</text>
+<line x1="70" y1="208.00" x2="1870" y2="208.00" stroke="#e2e8f0"/>
+<line x1="65" y1="208.00" x2="70" y2="208.00" stroke="#334155"/>
+<text x="60.00" y="212.00" font-size="11" font-family="Arial, sans-serif" text-anchor="end" font-weight="400" fill="#111827">44</text>
+<line x1="70" y1="38.00" x2="1870" y2="38.00" stroke="#e2e8f0"/>
+<line x1="65" y1="38.00" x2="70" y2="38.00" stroke="#334155"/>
+<text x="60.00" y="42.00" font-size="11" font-family="Arial, sans-serif" text-anchor="end" font-weight="400" fill="#111827">46</text>
+<text x="970.00" y="422.00" font-size="13" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">cycle</text>
+<text x="18" y="208.00" font-size="13" font-family="Arial, sans-serif" font-weight="700" fill="#111827" text-anchor="middle" transform="rotate(-90 18 208.00)">pos</text>
+<polyline points="75.62,208.00 86.88,38.00 92.50,38.00" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>image_read -&gt; conv1, stream 15</title></polyline>
+<polyline points="109.38,38.00 120.62,208.00 368.12,378.00 373.75,378.00" fill="none" stroke="#dc2626" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>conv1 -&gt; bias_add1, stream 15</title></polyline>
+<polyline points="379.38,378.00 385.00,378.00" fill="none" stroke="#16a34a" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>bias_add1 -&gt; relu1, stream 21</title></polyline>
+<polyline points="390.62,378.00 396.25,378.00" fill="none" stroke="#9333ea" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>relu1 -&gt; maxpool1, stream 14</title></polyline>
+<polyline points="407.50,378.00 655.00,208.00 666.25,38.00 671.88,38.00" fill="none" stroke="#ea580c" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>maxpool1 -&gt; conv2, stream 15</title></polyline>
+<polyline points="688.75,38.00 700.00,208.00 947.50,378.00 953.12,378.00" fill="none" stroke="#0891b2" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>conv2 -&gt; bias_add2, stream 0</title></polyline>
+<polyline points="958.75,378.00 964.38,378.00" fill="none" stroke="#be123c" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>bias_add2 -&gt; relu2, stream 15</title></polyline>
+<polyline points="970.00,378.00 975.62,378.00" fill="none" stroke="#4f46e5" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>relu2 -&gt; batch_norm2, stream 15</title></polyline>
+<polyline points="986.88,378.00 1234.38,208.00 1245.62,38.00 1251.25,38.00" fill="none" stroke="#65a30d" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>batch_norm2 -&gt; conv3, stream 15</title></polyline>
+<polyline points="1268.12,38.00 1279.38,208.00 1526.88,378.00 1532.50,378.00" fill="none" stroke="#a16207" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>conv3 -&gt; bias_add3, stream 15</title></polyline>
+<polyline points="1538.12,378.00 1543.75,378.00" fill="none" stroke="#0f766e" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>bias_add3 -&gt; relu3, stream 21</title></polyline>
+<polyline points="1549.38,378.00 1555.00,378.00" fill="none" stroke="#7c3aed" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>relu3 -&gt; avg_pool, stream 15</title></polyline>
+<polyline points="1566.25,378.00 1813.75,208.00 1825.00,38.00 1830.62,38.00" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>avg_pool -&gt; fc_matmul, stream 15</title></polyline>
+<polyline points="1847.50,38.00 1858.75,208.00 1864.38,208.00" fill="none" stroke="#dc2626" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>fc_matmul -&gt; logits_write, stream 0</title></polyline>
+<line x1="86.88" y1="38.00" x2="86.88" y2="48.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="78.08" y="44.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="86.88" y="56.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e1</text>
+<line x1="368.12" y1="378.00" x2="368.12" y2="356.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="359.32" y="352.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="368.12" y="364.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e2</text>
+<line x1="385.00" y1="378.00" x2="403.00" y2="356.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="394.20" y="352.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="403.00" y="364.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e3</text>
+<line x1="396.25" y1="378.00" x2="432.25" y2="356.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="423.45" y="352.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="432.25" y="364.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e4</text>
+<line x1="666.25" y1="38.00" x2="666.25" y2="48.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="657.45" y="44.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="666.25" y="56.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e5</text>
+<line x1="947.50" y1="378.00" x2="947.50" y2="356.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="938.70" y="352.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="947.50" y="364.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e6</text>
+<line x1="964.38" y1="378.00" x2="982.38" y2="356.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="973.58" y="352.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="982.38" y="364.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e7</text>
+<line x1="975.62" y1="378.00" x2="1011.62" y2="356.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1002.83" y="352.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1011.62" y="364.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e8</text>
+<line x1="1245.62" y1="38.00" x2="1245.62" y2="48.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1236.83" y="44.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1245.62" y="56.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e9</text>
+<line x1="1526.88" y1="378.00" x2="1526.88" y2="356.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1515.17" y="352.00" width="23.40" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1526.88" y="364.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e10</text>
+<line x1="1543.75" y1="378.00" x2="1561.75" y2="356.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1550.05" y="352.00" width="23.40" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1561.75" y="364.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e11</text>
+<line x1="1555.00" y1="378.00" x2="1591.00" y2="356.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1579.30" y="352.00" width="23.40" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1591.00" y="364.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e12</text>
+<line x1="1825.00" y1="38.00" x2="1825.00" y2="48.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1813.30" y="44.00" width="23.40" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1825.00" y="56.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e13</text>
+<line x1="1858.75" y1="208.00" x2="1840.75" y2="186.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1829.05" y="182.00" width="23.40" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1840.75" y="194.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e14</text>
+<rect x="70.00" y="185.00" width="5.62" height="46.00" rx="4" fill="#2563eb" opacity="0.9"><title>image_read: issue 0, finish 1, pos 44</title></rect>
+<rect x="92.50" y="15.00" width="16.88" height="46.00" rx="4" fill="#dc2626" opacity="0.9"><title>conv1: issue 4, finish 7, pos 46</title></rect>
+<rect x="373.75" y="355.00" width="5.62" height="46.00" rx="4" fill="#16a34a" opacity="0.9"><title>bias_add1: issue 54, finish 55, pos 0</title></rect>
+<rect x="385.00" y="355.00" width="5.62" height="46.00" rx="4" fill="#9333ea" opacity="0.9"><title>relu1: issue 56, finish 57, pos 0</title></rect>
+<rect x="396.25" y="355.00" width="11.25" height="46.00" rx="4" fill="#ea580c" opacity="0.9"><title>maxpool1: issue 58, finish 60, pos 0</title></rect>
+<rect x="671.88" y="15.00" width="16.88" height="46.00" rx="4" fill="#0891b2" opacity="0.9"><title>conv2: issue 107, finish 110, pos 46</title></rect>
+<rect x="953.12" y="355.00" width="5.62" height="46.00" rx="4" fill="#be123c" opacity="0.9"><title>bias_add2: issue 157, finish 158, pos 0</title></rect>
+<rect x="964.38" y="355.00" width="5.62" height="46.00" rx="4" fill="#4f46e5" opacity="0.9"><title>relu2: issue 159, finish 160, pos 0</title></rect>
+<rect x="975.62" y="355.00" width="11.25" height="46.00" rx="4" fill="#65a30d" opacity="0.9"><title>batch_norm2: issue 161, finish 163, pos 0</title></rect>
+<rect x="1251.25" y="15.00" width="16.88" height="46.00" rx="4" fill="#a16207" opacity="0.9"><title>conv3: issue 210, finish 213, pos 46</title></rect>
+<rect x="1532.50" y="355.00" width="5.62" height="46.00" rx="4" fill="#0f766e" opacity="0.9"><title>bias_add3: issue 260, finish 261, pos 0</title></rect>
+<rect x="1543.75" y="355.00" width="5.62" height="46.00" rx="4" fill="#7c3aed" opacity="0.9"><title>relu3: issue 262, finish 263, pos 0</title></rect>
+<rect x="1555.00" y="355.00" width="11.25" height="46.00" rx="4" fill="#2563eb" opacity="0.9"><title>avg_pool: issue 264, finish 266, pos 0</title></rect>
+<rect x="1830.62" y="15.00" width="16.88" height="46.00" rx="4" fill="#dc2626" opacity="0.9"><title>fc_matmul: issue 313, finish 316, pos 46</title></rect>
+<rect x="1864.38" y="185.00" width="5.62" height="46.00" rx="4" fill="#16a34a" opacity="0.9"><title>logits_write: issue 319, finish 320, pos 44</title></rect>
+<line x1="376.56" y1="378.00" x2="376.56" y2="327.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="359.06" y="325.00" width="35.00" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="376.56" y="337.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">bias1</text>
+<line x1="387.81" y1="378.00" x2="423.81" y2="327.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="406.31" y="325.00" width="35.00" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="423.81" y="337.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">relu1</text>
+<line x1="401.88" y1="378.00" x2="401.88" y2="297.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="375.68" y="295.00" width="52.40" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="401.88" y="307.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">maxpool1</text>
+<line x1="955.94" y1="378.00" x2="955.94" y2="327.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="938.44" y="325.00" width="35.00" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="955.94" y="337.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">bias2</text>
+<line x1="967.19" y1="378.00" x2="1003.19" y2="327.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="985.69" y="325.00" width="35.00" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1003.19" y="337.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">relu2</text>
+<line x1="981.25" y1="378.00" x2="981.25" y2="297.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="969.55" y="295.00" width="23.40" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="981.25" y="307.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">bn2</text>
+<line x1="1535.31" y1="378.00" x2="1535.31" y2="327.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1517.81" y="325.00" width="35.00" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1535.31" y="337.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">bias3</text>
+<line x1="1546.56" y1="378.00" x2="1582.56" y2="327.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1565.06" y="325.00" width="35.00" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1582.56" y="337.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">relu3</text>
+<line x1="1560.62" y1="378.00" x2="1560.62" y2="297.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1534.42" y="295.00" width="52.40" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1560.62" y="307.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">avg_pool</text>
+<line x1="72.81" y1="208.00" x2="108.81" y2="157.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="76.81" y="155.00" width="64.00" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="108.81" y="167.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">image_read</text>
+<line x1="1867.19" y1="208.00" x2="1831.19" y2="157.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1810.79" y="155.00" width="40.80" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1831.19" y="167.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">logits</text>
+<line x1="100.94" y1="38.00" x2="100.94" y2="69.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="83.44" y="67.00" width="35.00" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="100.94" y="79.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">conv1</text>
+<line x1="680.31" y1="38.00" x2="680.31" y2="69.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="662.81" y="67.00" width="35.00" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="680.31" y="79.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">conv2</text>
+<line x1="1259.69" y1="38.00" x2="1259.69" y2="69.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1242.19" y="67.00" width="35.00" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1259.69" y="79.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">conv3</text>
+<line x1="1839.06" y1="38.00" x2="1839.06" y2="69.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1821.56" y="67.00" width="35.00" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1839.06" y="79.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">fc_mm</text>
+</svg>

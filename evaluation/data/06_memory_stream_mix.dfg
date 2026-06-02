@@ -1,0 +1,18 @@
+# Representative memory-heavy stream workload.
+# Purpose: tests memory lower-bound timing plus compute exact timing.
+op read_a memory 1 slices=-44..-1,1..44
+op read_b memory 1 slices=-44..-1,1..44
+op read_c memory 1 slices=-44..-1,1..44
+op vec_add_ab compute 1 slices=0
+op relu_ab compute 1 slices=0
+op matmul_c compute 3 slices=-46,46
+op vec_add_final compute 1 slices=0
+op final_write memory 1 slices=-44..-1,1..44
+
+edge read_a read_b
+edge read_b read_c
+edge read_c vec_add_ab
+edge vec_add_ab relu_ab
+edge relu_ab matmul_c
+edge matmul_c vec_add_final
+edge vec_add_final final_write

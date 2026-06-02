@@ -1,0 +1,40 @@
+{
+  "status": "optimal",
+  "objective_value": 320.000000,
+  "makespan": 320,
+  "variable_count": 4907,
+  "constraint_count": 11344,
+  "operations": [
+    {"id": "image_read", "kind": "memory", "dfunc": 1, "issue": 0, "finish": 1, "pos": 44},
+    {"id": "conv1", "kind": "compute", "dfunc": 3, "issue": 4, "finish": 7, "pos": 46},
+    {"id": "bias_add1", "kind": "compute", "dfunc": 1, "issue": 54, "finish": 55, "pos": 0},
+    {"id": "relu1", "kind": "compute", "dfunc": 1, "issue": 56, "finish": 57, "pos": 0},
+    {"id": "maxpool1", "kind": "compute", "dfunc": 2, "issue": 58, "finish": 60, "pos": 0},
+    {"id": "conv2", "kind": "compute", "dfunc": 3, "issue": 107, "finish": 110, "pos": 46},
+    {"id": "bias_add2", "kind": "compute", "dfunc": 1, "issue": 157, "finish": 158, "pos": 0},
+    {"id": "relu2", "kind": "compute", "dfunc": 1, "issue": 159, "finish": 160, "pos": 0},
+    {"id": "batch_norm2", "kind": "compute", "dfunc": 2, "issue": 161, "finish": 163, "pos": 0},
+    {"id": "conv3", "kind": "compute", "dfunc": 3, "issue": 210, "finish": 213, "pos": 46},
+    {"id": "bias_add3", "kind": "compute", "dfunc": 1, "issue": 260, "finish": 261, "pos": 0},
+    {"id": "relu3", "kind": "compute", "dfunc": 1, "issue": 262, "finish": 263, "pos": 0},
+    {"id": "avg_pool", "kind": "compute", "dfunc": 2, "issue": 264, "finish": 266, "pos": 0},
+    {"id": "fc_matmul", "kind": "compute", "dfunc": 3, "issue": 313, "finish": 316, "pos": 46},
+    {"id": "logits_write", "kind": "memory", "dfunc": 1, "issue": 319, "finish": 320, "pos": 44}
+  ],
+  "edges": [
+    {"src": "image_read", "dst": "conv1", "stream": 15, "direction": "east", "lo": 44, "hi": 46, "phase": -43},
+    {"src": "conv1", "dst": "bias_add1", "stream": 15, "direction": "west", "lo": 0, "hi": 46, "phase": 53},
+    {"src": "bias_add1", "dst": "relu1", "stream": 21, "direction": "east", "lo": 0, "hi": 0, "phase": 55},
+    {"src": "relu1", "dst": "maxpool1", "stream": 14, "direction": "east", "lo": 0, "hi": 0, "phase": 57},
+    {"src": "maxpool1", "dst": "conv2", "stream": 15, "direction": "east", "lo": 0, "hi": 46, "phase": 60},
+    {"src": "conv2", "dst": "bias_add2", "stream": 0, "direction": "west", "lo": 0, "hi": 46, "phase": 156},
+    {"src": "bias_add2", "dst": "relu2", "stream": 15, "direction": "west", "lo": 0, "hi": 0, "phase": 158},
+    {"src": "relu2", "dst": "batch_norm2", "stream": 15, "direction": "west", "lo": 0, "hi": 0, "phase": 160},
+    {"src": "batch_norm2", "dst": "conv3", "stream": 15, "direction": "east", "lo": 0, "hi": 46, "phase": 163},
+    {"src": "conv3", "dst": "bias_add3", "stream": 15, "direction": "west", "lo": 0, "hi": 46, "phase": 259},
+    {"src": "bias_add3", "dst": "relu3", "stream": 21, "direction": "west", "lo": 0, "hi": 0, "phase": 261},
+    {"src": "relu3", "dst": "avg_pool", "stream": 15, "direction": "west", "lo": 0, "hi": 0, "phase": 263},
+    {"src": "avg_pool", "dst": "fc_matmul", "stream": 15, "direction": "east", "lo": 0, "hi": 46, "phase": 266},
+    {"src": "fc_matmul", "dst": "logits_write", "stream": 0, "direction": "west", "lo": 44, "hi": 46, "phase": 362}
+  ]
+}

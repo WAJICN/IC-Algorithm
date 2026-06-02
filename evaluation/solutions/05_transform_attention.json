@@ -1,0 +1,36 @@
+{
+  "status": "optimal",
+  "objective_value": 184.000000,
+  "makespan": 184,
+  "variable_count": 3695,
+  "constraint_count": 8284,
+  "operations": [
+    {"id": "token_read", "kind": "memory", "dfunc": 1, "issue": 0, "finish": 1, "pos": -44},
+    {"id": "q_matmul", "kind": "compute", "dfunc": 3, "issue": 4, "finish": 7, "pos": -46},
+    {"id": "q_transpose", "kind": "compute", "dfunc": 2, "issue": 9, "finish": 11, "pos": -45},
+    {"id": "k_matmul", "kind": "compute", "dfunc": 3, "issue": 13, "finish": 16, "pos": -46},
+    {"id": "k_transpose", "kind": "compute", "dfunc": 2, "issue": 18, "finish": 20, "pos": -45},
+    {"id": "score_matmul", "kind": "compute", "dfunc": 3, "issue": 22, "finish": 25, "pos": -46},
+    {"id": "scale", "kind": "compute", "dfunc": 1, "issue": 72, "finish": 73, "pos": 0},
+    {"id": "softmax", "kind": "compute", "dfunc": 2, "issue": 74, "finish": 76, "pos": 0},
+    {"id": "v_matmul", "kind": "compute", "dfunc": 3, "issue": 123, "finish": 126, "pos": -46},
+    {"id": "context_matmul", "kind": "compute", "dfunc": 3, "issue": 127, "finish": 130, "pos": -46},
+    {"id": "residual_add", "kind": "compute", "dfunc": 1, "issue": 177, "finish": 178, "pos": 0},
+    {"id": "layer_norm", "kind": "compute", "dfunc": 2, "issue": 179, "finish": 181, "pos": 0},
+    {"id": "token_write", "kind": "memory", "dfunc": 1, "issue": 183, "finish": 184, "pos": -1}
+  ],
+  "edges": [
+    {"src": "token_read", "dst": "q_matmul", "stream": 1, "direction": "west", "lo": -46, "hi": -44, "phase": -43},
+    {"src": "q_matmul", "dst": "q_transpose", "stream": 5, "direction": "east", "lo": -46, "hi": -45, "phase": 53},
+    {"src": "q_transpose", "dst": "k_matmul", "stream": 16, "direction": "west", "lo": -46, "hi": -45, "phase": -34},
+    {"src": "k_matmul", "dst": "k_transpose", "stream": 29, "direction": "east", "lo": -46, "hi": -45, "phase": 62},
+    {"src": "k_transpose", "dst": "score_matmul", "stream": 12, "direction": "west", "lo": -46, "hi": -45, "phase": -25},
+    {"src": "score_matmul", "dst": "scale", "stream": 10, "direction": "east", "lo": -46, "hi": 0, "phase": 71},
+    {"src": "scale", "dst": "softmax", "stream": 31, "direction": "east", "lo": 0, "hi": 0, "phase": 73},
+    {"src": "softmax", "dst": "v_matmul", "stream": 30, "direction": "west", "lo": -46, "hi": 0, "phase": 76},
+    {"src": "v_matmul", "dst": "context_matmul", "stream": 15, "direction": "east", "lo": -46, "hi": -46, "phase": 172},
+    {"src": "context_matmul", "dst": "residual_add", "stream": 11, "direction": "east", "lo": -46, "hi": 0, "phase": 176},
+    {"src": "residual_add", "dst": "layer_norm", "stream": 26, "direction": "east", "lo": 0, "hi": 0, "phase": 178},
+    {"src": "layer_norm", "dst": "token_write", "stream": 9, "direction": "west", "lo": -1, "hi": 0, "phase": 181}
+  ]
+}

@@ -1,0 +1,34 @@
+# Representative CNN-style pipeline.
+# Purpose: tests repeated matrix-vector transitions and long physical routes.
+op image_read memory 1 slices=-44..-1,1..44
+op conv1 compute 3 slices=-46,46
+op bias_add1 compute 1 slices=0
+op relu1 compute 1 slices=0
+op maxpool1 compute 2 slices=0
+
+op conv2 compute 3 slices=-46,46
+op bias_add2 compute 1 slices=0
+op relu2 compute 1 slices=0
+op batch_norm2 compute 2 slices=0
+
+op conv3 compute 3 slices=-46,46
+op bias_add3 compute 1 slices=0
+op relu3 compute 1 slices=0
+op avg_pool compute 2 slices=0
+op fc_matmul compute 3 slices=-46,46
+op logits_write memory 1 slices=-44..-1,1..44
+
+edge image_read conv1
+edge conv1 bias_add1
+edge bias_add1 relu1
+edge relu1 maxpool1
+edge maxpool1 conv2
+edge conv2 bias_add2
+edge bias_add2 relu2
+edge relu2 batch_norm2
+edge batch_norm2 conv3
+edge conv3 bias_add3
+edge bias_add3 relu3
+edge relu3 avg_pool
+edge avg_pool fc_matmul
+edge fc_matmul logits_write

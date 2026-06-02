@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="536" viewBox="0 0 1900 536">
+<rect width="100%" height="100%" fill="white"/>
+<text x="950.00" y="22.00" font-size="16" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">Schedule and Data Routes, makespan=164</text>
+<rect x="70" y="38" width="1800" height="440" fill="#f8fafc" stroke="#cbd5e1"/>
+<line x1="70.00" y1="38" x2="70.00" y2="478" stroke="#e2e8f0"/>
+<line x1="70.00" y1="478" x2="70.00" y2="483" stroke="#334155"/>
+<text x="70.00" y="498.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">0</text>
+<line x1="289.51" y1="38" x2="289.51" y2="478" stroke="#e2e8f0"/>
+<line x1="289.51" y1="478" x2="289.51" y2="483" stroke="#334155"/>
+<text x="289.51" y="498.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">20</text>
+<line x1="509.02" y1="38" x2="509.02" y2="478" stroke="#e2e8f0"/>
+<line x1="509.02" y1="478" x2="509.02" y2="483" stroke="#334155"/>
+<text x="509.02" y="498.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">40</text>
+<line x1="728.54" y1="38" x2="728.54" y2="478" stroke="#e2e8f0"/>
+<line x1="728.54" y1="478" x2="728.54" y2="483" stroke="#334155"/>
+<text x="728.54" y="498.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">60</text>
+<line x1="948.05" y1="38" x2="948.05" y2="478" stroke="#e2e8f0"/>
+<line x1="948.05" y1="478" x2="948.05" y2="483" stroke="#334155"/>
+<text x="948.05" y="498.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">80</text>
+<line x1="1167.56" y1="38" x2="1167.56" y2="478" stroke="#e2e8f0"/>
+<line x1="1167.56" y1="478" x2="1167.56" y2="483" stroke="#334155"/>
+<text x="1167.56" y="498.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">100</text>
+<line x1="1387.07" y1="38" x2="1387.07" y2="478" stroke="#e2e8f0"/>
+<line x1="1387.07" y1="478" x2="1387.07" y2="483" stroke="#334155"/>
+<text x="1387.07" y="498.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">120</text>
+<line x1="1606.59" y1="38" x2="1606.59" y2="478" stroke="#e2e8f0"/>
+<line x1="1606.59" y1="478" x2="1606.59" y2="483" stroke="#334155"/>
+<text x="1606.59" y="498.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">140</text>
+<line x1="1826.10" y1="38" x2="1826.10" y2="478" stroke="#e2e8f0"/>
+<line x1="1826.10" y1="478" x2="1826.10" y2="483" stroke="#334155"/>
+<text x="1826.10" y="498.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">160</text>
+<line x1="1870.00" y1="38" x2="1870.00" y2="478" stroke="#e2e8f0"/>
+<line x1="1870.00" y1="478" x2="1870.00" y2="483" stroke="#334155"/>
+<text x="1870.00" y="498.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">164</text>
+<line x1="70" y1="478.00" x2="1870" y2="478.00" stroke="#e2e8f0"/>
+<line x1="65" y1="478.00" x2="70" y2="478.00" stroke="#334155"/>
+<text x="60.00" y="482.00" font-size="11" font-family="Arial, sans-serif" text-anchor="end" font-weight="400" fill="#111827">-46</text>
+<line x1="70" y1="368.00" x2="1870" y2="368.00" stroke="#e2e8f0"/>
+<line x1="65" y1="368.00" x2="70" y2="368.00" stroke="#334155"/>
+<text x="60.00" y="372.00" font-size="11" font-family="Arial, sans-serif" text-anchor="end" font-weight="400" fill="#111827">-44</text>
+<line x1="70" y1="258.00" x2="1870" y2="258.00" stroke="#e2e8f0"/>
+<line x1="65" y1="258.00" x2="70" y2="258.00" stroke="#334155"/>
+<text x="60.00" y="262.00" font-size="11" font-family="Arial, sans-serif" text-anchor="end" font-weight="400" fill="#111827">-1</text>
+<line x1="70" y1="148.00" x2="1870" y2="148.00" stroke="#e2e8f0"/>
+<line x1="65" y1="148.00" x2="70" y2="148.00" stroke="#334155"/>
+<text x="60.00" y="152.00" font-size="11" font-family="Arial, sans-serif" text-anchor="end" font-weight="400" fill="#111827">0</text>
+<line x1="70" y1="38.00" x2="1870" y2="38.00" stroke="#e2e8f0"/>
+<line x1="65" y1="38.00" x2="70" y2="38.00" stroke="#334155"/>
+<text x="60.00" y="42.00" font-size="11" font-family="Arial, sans-serif" text-anchor="end" font-weight="400" fill="#111827">46</text>
+<text x="970.00" y="522.00" font-size="13" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">cycle</text>
+<text x="18" y="258.00" font-size="13" font-family="Arial, sans-serif" font-weight="700" fill="#111827" text-anchor="middle" transform="rotate(-90 18 258.00)">pos</text>
+<polyline points="80.98,368.00 102.93,478.00 113.90,478.00" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>input_read -&gt; conv1, stream 20</title></polyline>
+<polyline points="146.83,478.00 168.78,368.00 640.73,258.00 651.71,148.00 662.68,148.00" fill="none" stroke="#dc2626" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>conv1 -&gt; batch_norm1, stream 20</title></polyline>
+<polyline points="684.63,148.00 695.61,148.00" fill="none" stroke="#16a34a" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>batch_norm1 -&gt; relu1, stream 20</title></polyline>
+<polyline points="706.59,148.00 1211.46,38.00 1222.44,38.00" fill="none" stroke="#9333ea" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>relu1 -&gt; conv2, stream 20</title></polyline>
+<polyline points="1255.37,38.00 1760.24,148.00 1771.22,148.00" fill="none" stroke="#ea580c" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>conv2 -&gt; batch_norm2, stream 20</title></polyline>
+<polyline points="80.98,368.00 552.93,258.00 563.90,148.00 1068.78,38.00 1079.76,38.00" fill="none" stroke="#0891b2" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>input_read -&gt; skip_projection, stream 18</title></polyline>
+<polyline points="1793.17,148.00 1804.15,148.00" fill="none" stroke="#be123c" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>batch_norm2 -&gt; residual_add, stream 0</title></polyline>
+<polyline points="1288.29,38.00 1793.17,148.00 1804.15,148.00" fill="none" stroke="#4f46e5" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>skip_projection -&gt; residual_add, stream 20</title></polyline>
+<polyline points="1815.12,148.00 1826.10,148.00" fill="none" stroke="#65a30d" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>residual_add -&gt; relu_out, stream 20</title></polyline>
+<polyline points="1837.07,148.00 1848.05,258.00 1859.02,258.00" fill="none" stroke="#a16207" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>relu_out -&gt; output_write, stream 20</title></polyline>
+<line x1="102.93" y1="478.00" x2="102.93" y2="456.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="94.13" y="452.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="102.93" y="464.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e1</text>
+<line x1="640.73" y1="258.00" x2="640.73" y2="236.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="631.93" y="232.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="640.73" y="244.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e2</text>
+<line x1="695.61" y1="148.00" x2="695.61" y2="126.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="686.81" y="122.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="695.61" y="134.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e3</text>
+<line x1="1211.46" y1="38.00" x2="1211.46" y2="48.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1202.66" y="44.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1211.46" y="56.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e4</text>
+<line x1="1760.24" y1="148.00" x2="1760.24" y2="126.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1751.44" y="122.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1760.24" y="134.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e5</text>
+<line x1="563.90" y1="148.00" x2="563.90" y2="126.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="555.10" y="122.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="563.90" y="134.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e6</text>
+<line x1="1804.15" y1="148.00" x2="1804.15" y2="126.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1795.35" y="122.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1804.15" y="134.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e7</text>
+<line x1="1793.17" y1="148.00" x2="1829.17" y2="126.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1820.37" y="122.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1829.17" y="134.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e8</text>
+<line x1="1826.10" y1="148.00" x2="1826.10" y2="158.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1817.30" y="154.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1826.10" y="166.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e9</text>
+<line x1="1848.05" y1="258.00" x2="1848.05" y2="236.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1836.35" y="232.00" width="23.40" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1848.05" y="244.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e10</text>
+<rect x="70.00" y="345.00" width="10.98" height="46.00" rx="4" fill="#2563eb" opacity="0.9"><title>input_read: issue 0, finish 1, pos -44</title></rect>
+<rect x="113.90" y="455.00" width="32.93" height="46.00" rx="4" fill="#dc2626" opacity="0.9"><title>conv1: issue 4, finish 7, pos -46</title></rect>
+<rect x="662.68" y="125.00" width="21.95" height="46.00" rx="4" fill="#16a34a" opacity="0.9"><title>batch_norm1: issue 54, finish 56, pos 0</title></rect>
+<rect x="695.61" y="125.00" width="10.98" height="46.00" rx="4" fill="#9333ea" opacity="0.9"><title>relu1: issue 57, finish 58, pos 0</title></rect>
+<rect x="1222.44" y="15.00" width="32.93" height="46.00" rx="4" fill="#ea580c" opacity="0.9"><title>conv2: issue 105, finish 108, pos 46</title></rect>
+<rect x="1771.22" y="125.00" width="21.95" height="46.00" rx="4" fill="#0891b2" opacity="0.9"><title>batch_norm2: issue 155, finish 157, pos 0</title></rect>
+<rect x="1079.76" y="15.00" width="208.54" height="46.00" rx="4" fill="#be123c" opacity="0.9"><title>skip_projection: issue 92, finish 111, pos 46</title></rect>
+<rect x="1804.15" y="125.00" width="10.98" height="46.00" rx="4" fill="#4f46e5" opacity="0.9"><title>residual_add: issue 158, finish 159, pos 0</title></rect>
+<rect x="1826.10" y="125.00" width="10.98" height="46.00" rx="4" fill="#65a30d" opacity="0.9"><title>relu_out: issue 160, finish 161, pos 0</title></rect>
+<rect x="1859.02" y="235.00" width="10.98" height="46.00" rx="4" fill="#a16207" opacity="0.9"><title>output_write: issue 163, finish 164, pos -1</title></rect>
+<line x1="130.37" y1="478.00" x2="130.37" y2="427.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="112.87" y="425.00" width="35.00" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="130.37" y="437.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">conv1</text>
+<line x1="75.49" y1="368.00" x2="93.49" y2="317.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="75.99" y="315.00" width="35.00" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="93.49" y="327.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">input</text>
+<rect x="1808.20" y="246.00" width="75.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1846.00" y="258.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">output_write</text>
+<line x1="673.66" y1="148.00" x2="673.66" y2="179.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="661.96" y="177.00" width="23.40" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="673.66" y="189.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">bn1</text>
+<line x1="701.10" y1="148.00" x2="719.10" y2="179.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="701.60" y="177.00" width="35.00" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="719.10" y="189.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">relu1</text>
+<line x1="1782.20" y1="148.00" x2="1782.20" y2="179.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1770.50" y="177.00" width="23.40" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1782.20" y="189.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">bn2</text>
+<line x1="1809.63" y1="148.00" x2="1827.63" y2="179.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1804.33" y="177.00" width="46.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1827.63" y="189.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">res_add</text>
+<line x1="1831.59" y1="148.00" x2="1831.59" y2="209.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1805.39" y="207.00" width="52.40" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1831.59" y="219.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">relu_out</text>
+<line x1="1184.02" y1="38.00" x2="1184.02" y2="71.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1154.92" y="69.00" width="58.20" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1184.02" y="81.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">skip_proj</text>
+<line x1="1238.90" y1="38.00" x2="1238.90" y2="69.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1221.40" y="67.00" width="35.00" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1238.90" y="79.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">conv2</text>
+</svg>

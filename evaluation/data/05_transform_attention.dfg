@@ -1,0 +1,28 @@
+# Representative transformer/attention-style workload.
+# Purpose: tests matrix, vector, transform, and memory domains together.
+op token_read memory 1 slices=-44..-1,1..44
+op q_matmul compute 3 slices=-46,46
+op q_transpose compute 2 slices=-45,45
+op k_matmul compute 3 slices=-46,46
+op k_transpose compute 2 slices=-45,45
+op score_matmul compute 3 slices=-46,46
+op scale compute 1 slices=0
+op softmax compute 2 slices=0
+op v_matmul compute 3 slices=-46,46
+op context_matmul compute 3 slices=-46,46
+op residual_add compute 1 slices=0
+op layer_norm compute 2 slices=0
+op token_write memory 1 slices=-44..-1,1..44
+
+edge token_read q_matmul
+edge q_matmul q_transpose
+edge q_transpose k_matmul
+edge k_matmul k_transpose
+edge k_transpose score_matmul
+edge score_matmul scale
+edge scale softmax
+edge softmax v_matmul
+edge v_matmul context_matmul
+edge context_matmul residual_add
+edge residual_add layer_norm
+edge layer_norm token_write

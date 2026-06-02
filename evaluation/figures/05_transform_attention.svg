@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="536" viewBox="0 0 1900 536">
+<rect width="100%" height="100%" fill="white"/>
+<text x="950.00" y="22.00" font-size="16" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">Schedule and Data Routes, makespan=184</text>
+<rect x="70" y="38" width="1800" height="440" fill="#f8fafc" stroke="#cbd5e1"/>
+<line x1="70.00" y1="38" x2="70.00" y2="478" stroke="#e2e8f0"/>
+<line x1="70.00" y1="478" x2="70.00" y2="483" stroke="#334155"/>
+<text x="70.00" y="498.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">0</text>
+<line x1="265.65" y1="38" x2="265.65" y2="478" stroke="#e2e8f0"/>
+<line x1="265.65" y1="478" x2="265.65" y2="483" stroke="#334155"/>
+<text x="265.65" y="498.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">20</text>
+<line x1="461.30" y1="38" x2="461.30" y2="478" stroke="#e2e8f0"/>
+<line x1="461.30" y1="478" x2="461.30" y2="483" stroke="#334155"/>
+<text x="461.30" y="498.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">40</text>
+<line x1="656.96" y1="38" x2="656.96" y2="478" stroke="#e2e8f0"/>
+<line x1="656.96" y1="478" x2="656.96" y2="483" stroke="#334155"/>
+<text x="656.96" y="498.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">60</text>
+<line x1="852.61" y1="38" x2="852.61" y2="478" stroke="#e2e8f0"/>
+<line x1="852.61" y1="478" x2="852.61" y2="483" stroke="#334155"/>
+<text x="852.61" y="498.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">80</text>
+<line x1="1048.26" y1="38" x2="1048.26" y2="478" stroke="#e2e8f0"/>
+<line x1="1048.26" y1="478" x2="1048.26" y2="483" stroke="#334155"/>
+<text x="1048.26" y="498.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">100</text>
+<line x1="1243.91" y1="38" x2="1243.91" y2="478" stroke="#e2e8f0"/>
+<line x1="1243.91" y1="478" x2="1243.91" y2="483" stroke="#334155"/>
+<text x="1243.91" y="498.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">120</text>
+<line x1="1439.57" y1="38" x2="1439.57" y2="478" stroke="#e2e8f0"/>
+<line x1="1439.57" y1="478" x2="1439.57" y2="483" stroke="#334155"/>
+<text x="1439.57" y="498.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">140</text>
+<line x1="1635.22" y1="38" x2="1635.22" y2="478" stroke="#e2e8f0"/>
+<line x1="1635.22" y1="478" x2="1635.22" y2="483" stroke="#334155"/>
+<text x="1635.22" y="498.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">160</text>
+<line x1="1830.87" y1="38" x2="1830.87" y2="478" stroke="#e2e8f0"/>
+<line x1="1830.87" y1="478" x2="1830.87" y2="483" stroke="#334155"/>
+<text x="1830.87" y="498.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">180</text>
+<line x1="1870.00" y1="38" x2="1870.00" y2="478" stroke="#e2e8f0"/>
+<line x1="1870.00" y1="478" x2="1870.00" y2="483" stroke="#334155"/>
+<text x="1870.00" y="498.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">184</text>
+<line x1="70" y1="478.00" x2="1870" y2="478.00" stroke="#e2e8f0"/>
+<line x1="65" y1="478.00" x2="70" y2="478.00" stroke="#334155"/>
+<text x="60.00" y="482.00" font-size="11" font-family="Arial, sans-serif" text-anchor="end" font-weight="400" fill="#111827">-46</text>
+<line x1="70" y1="368.00" x2="1870" y2="368.00" stroke="#e2e8f0"/>
+<line x1="65" y1="368.00" x2="70" y2="368.00" stroke="#334155"/>
+<text x="60.00" y="372.00" font-size="11" font-family="Arial, sans-serif" text-anchor="end" font-weight="400" fill="#111827">-45</text>
+<line x1="70" y1="258.00" x2="1870" y2="258.00" stroke="#e2e8f0"/>
+<line x1="65" y1="258.00" x2="70" y2="258.00" stroke="#334155"/>
+<text x="60.00" y="262.00" font-size="11" font-family="Arial, sans-serif" text-anchor="end" font-weight="400" fill="#111827">-44</text>
+<line x1="70" y1="148.00" x2="1870" y2="148.00" stroke="#e2e8f0"/>
+<line x1="65" y1="148.00" x2="70" y2="148.00" stroke="#334155"/>
+<text x="60.00" y="152.00" font-size="11" font-family="Arial, sans-serif" text-anchor="end" font-weight="400" fill="#111827">-1</text>
+<line x1="70" y1="38.00" x2="1870" y2="38.00" stroke="#e2e8f0"/>
+<line x1="65" y1="38.00" x2="70" y2="38.00" stroke="#334155"/>
+<text x="60.00" y="42.00" font-size="11" font-family="Arial, sans-serif" text-anchor="end" font-weight="400" fill="#111827">0</text>
+<text x="970.00" y="522.00" font-size="13" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">cycle</text>
+<text x="18" y="258.00" font-size="13" font-family="Arial, sans-serif" font-weight="700" fill="#111827" text-anchor="middle" transform="rotate(-90 18 258.00)">pos</text>
+<polyline points="79.78,258.00 89.57,368.00 99.35,478.00 109.13,478.00" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>token_read -&gt; q_matmul, stream 1</title></polyline>
+<polyline points="138.48,478.00 148.26,368.00 158.04,368.00" fill="none" stroke="#dc2626" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>q_matmul -&gt; q_transpose, stream 5</title></polyline>
+<polyline points="177.61,368.00 187.39,478.00 197.17,478.00" fill="none" stroke="#16a34a" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>q_transpose -&gt; k_matmul, stream 16</title></polyline>
+<polyline points="226.52,478.00 236.30,368.00 246.09,368.00" fill="none" stroke="#9333ea" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>k_matmul -&gt; k_transpose, stream 29</title></polyline>
+<polyline points="265.65,368.00 275.43,478.00 285.22,478.00" fill="none" stroke="#ea580c" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>k_transpose -&gt; score_matmul, stream 12</title></polyline>
+<polyline points="314.57,478.00 324.35,368.00 334.13,258.00 754.78,148.00 764.57,38.00 774.35,38.00" fill="none" stroke="#0891b2" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>score_matmul -&gt; scale, stream 10</title></polyline>
+<polyline points="784.13,38.00 793.91,38.00" fill="none" stroke="#be123c" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>scale -&gt; softmax, stream 31</title></polyline>
+<polyline points="813.48,38.00 823.26,148.00 1243.91,258.00 1253.70,368.00 1263.48,478.00 1273.26,478.00" fill="none" stroke="#4f46e5" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>softmax -&gt; v_matmul, stream 30</title></polyline>
+<polyline points="1302.61,478.00 1312.39,478.00" fill="none" stroke="#65a30d" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>v_matmul -&gt; context_matmul, stream 15</title></polyline>
+<polyline points="1341.74,478.00 1351.52,368.00 1361.30,258.00 1781.96,148.00 1791.74,38.00 1801.52,38.00" fill="none" stroke="#a16207" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>context_matmul -&gt; residual_add, stream 11</title></polyline>
+<polyline points="1811.30,38.00 1821.09,38.00" fill="none" stroke="#0f766e" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>residual_add -&gt; layer_norm, stream 26</title></polyline>
+<polyline points="1840.65,38.00 1850.43,148.00 1860.22,148.00" fill="none" stroke="#7c3aed" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>layer_norm -&gt; token_write, stream 9</title></polyline>
+<line x1="99.35" y1="478.00" x2="99.35" y2="456.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="90.55" y="452.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="99.35" y="464.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e1</text>
+<line x1="148.26" y1="368.00" x2="148.26" y2="346.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="139.46" y="342.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="148.26" y="354.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e2</text>
+<line x1="187.39" y1="478.00" x2="187.39" y2="456.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="178.59" y="452.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="187.39" y="464.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e3</text>
+<line x1="236.30" y1="368.00" x2="236.30" y2="346.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="227.50" y="342.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="236.30" y="354.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e4</text>
+<line x1="275.43" y1="478.00" x2="275.43" y2="456.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="266.63" y="452.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="275.43" y="464.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e5</text>
+<line x1="754.78" y1="148.00" x2="754.78" y2="126.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="745.98" y="122.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="754.78" y="134.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e6</text>
+<line x1="793.91" y1="38.00" x2="793.91" y2="48.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="785.11" y="44.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="793.91" y="56.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e7</text>
+<line x1="1253.70" y1="368.00" x2="1253.70" y2="346.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1244.90" y="342.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1253.70" y="354.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e8</text>
+<line x1="1312.39" y1="478.00" x2="1312.39" y2="456.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1303.59" y="452.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1312.39" y="464.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e9</text>
+<line x1="1781.96" y1="148.00" x2="1781.96" y2="126.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1770.26" y="122.00" width="23.40" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1781.96" y="134.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e10</text>
+<line x1="1821.09" y1="38.00" x2="1821.09" y2="48.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1809.39" y="44.00" width="23.40" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1821.09" y="56.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e11</text>
+<line x1="1850.43" y1="148.00" x2="1850.43" y2="126.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1838.73" y="122.00" width="23.40" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1850.43" y="134.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e12</text>
+<rect x="70.00" y="235.00" width="9.78" height="46.00" rx="4" fill="#2563eb" opacity="0.9"><title>token_read: issue 0, finish 1, pos -44</title></rect>
+<rect x="109.13" y="455.00" width="29.35" height="46.00" rx="4" fill="#dc2626" opacity="0.9"><title>q_matmul: issue 4, finish 7, pos -46</title></rect>
+<rect x="158.04" y="345.00" width="19.57" height="46.00" rx="4" fill="#16a34a" opacity="0.9"><title>q_transpose: issue 9, finish 11, pos -45</title></rect>
+<rect x="197.17" y="455.00" width="29.35" height="46.00" rx="4" fill="#9333ea" opacity="0.9"><title>k_matmul: issue 13, finish 16, pos -46</title></rect>
+<rect x="246.09" y="345.00" width="19.57" height="46.00" rx="4" fill="#ea580c" opacity="0.9"><title>k_transpose: issue 18, finish 20, pos -45</title></rect>
+<rect x="285.22" y="455.00" width="29.35" height="46.00" rx="4" fill="#0891b2" opacity="0.9"><title>score_matmul: issue 22, finish 25, pos -46</title></rect>
+<rect x="774.35" y="15.00" width="9.78" height="46.00" rx="4" fill="#be123c" opacity="0.9"><title>scale: issue 72, finish 73, pos 0</title></rect>
+<rect x="793.91" y="15.00" width="19.57" height="46.00" rx="4" fill="#4f46e5" opacity="0.9"><title>softmax: issue 74, finish 76, pos 0</title></rect>
+<rect x="1273.26" y="455.00" width="29.35" height="46.00" rx="4" fill="#65a30d" opacity="0.9"><title>v_matmul: issue 123, finish 126, pos -46</title></rect>
+<rect x="1312.39" y="455.00" width="29.35" height="46.00" rx="4" fill="#a16207" opacity="0.9"><title>context_matmul: issue 127, finish 130, pos -46</title></rect>
+<rect x="1801.52" y="15.00" width="9.78" height="46.00" rx="4" fill="#0f766e" opacity="0.9"><title>residual_add: issue 177, finish 178, pos 0</title></rect>
+<rect x="1821.09" y="15.00" width="19.57" height="46.00" rx="4" fill="#7c3aed" opacity="0.9"><title>layer_norm: issue 179, finish 181, pos 0</title></rect>
+<rect x="1860.22" y="125.00" width="9.78" height="46.00" rx="4" fill="#2563eb" opacity="0.9"><title>token_write: issue 183, finish 184, pos -1</title></rect>
+<line x1="123.80" y1="478.00" x2="123.80" y2="427.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="97.60" y="425.00" width="52.40" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="123.80" y="437.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">q_matmul</text>
+<line x1="211.85" y1="478.00" x2="211.85" y2="427.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="185.65" y="425.00" width="52.40" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="211.85" y="437.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">k_matmul</text>
+<line x1="299.89" y1="478.00" x2="299.89" y2="427.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="262.09" y="425.00" width="75.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="299.89" y="437.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">score_matmul</text>
+<line x1="1287.93" y1="478.00" x2="1287.93" y2="427.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1261.73" y="425.00" width="52.40" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1287.93" y="437.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">v_matmul</text>
+<line x1="1327.07" y1="478.00" x2="1363.07" y2="427.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1319.47" y="425.00" width="87.20" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1363.07" y="437.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">context_matmul</text>
+<line x1="167.83" y1="368.00" x2="167.83" y2="317.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="132.93" y="315.00" width="69.80" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="167.83" y="327.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">q_transpose</text>
+<line x1="255.87" y1="368.00" x2="255.87" y2="317.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="220.97" y="315.00" width="69.80" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="255.87" y="327.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">k_transpose</text>
+<line x1="74.89" y1="258.00" x2="110.89" y2="207.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="78.89" y="205.00" width="64.00" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="110.89" y="217.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">token_read</text>
+<line x1="1865.11" y1="148.00" x2="1829.11" y2="179.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1794.21" y="177.00" width="69.80" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1829.11" y="189.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">token_write</text>
+<line x1="779.24" y1="38.00" x2="779.24" y2="69.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="761.74" y="67.00" width="35.00" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="779.24" y="79.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">scale</text>
+<line x1="803.70" y1="38.00" x2="839.70" y2="69.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="816.40" y="67.00" width="46.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="839.70" y="79.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">softmax</text>
+<line x1="1806.41" y1="38.00" x2="1806.41" y2="69.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1783.11" y="67.00" width="46.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1806.41" y="79.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">res_add</text>
+<line x1="1830.87" y1="38.00" x2="1830.87" y2="99.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1798.87" y="97.00" width="64.00" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1830.87" y="109.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">layer_norm</text>
+</svg>

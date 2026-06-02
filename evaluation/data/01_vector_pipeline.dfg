@@ -1,0 +1,14 @@
+# Representative vector pipeline.
+# Purpose: tests memory-vector-memory timing and repeated vector reuse at slice 0.
+op input_read memory 1 slices=-44..-1,1..44
+op bias_add compute 1 slices=0
+op relu compute 1 slices=0
+op layer_norm compute 2 slices=0
+op vec_scale compute 1 slices=0
+op output_write memory 1 slices=-44..-1,1..44
+
+edge input_read bias_add
+edge bias_add relu
+edge relu layer_norm
+edge layer_norm vec_scale
+edge vec_scale output_write

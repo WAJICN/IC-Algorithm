@@ -1,0 +1,26 @@
+{
+  "status": "optimal",
+  "objective_value": 111.000000,
+  "makespan": 111,
+  "variable_count": 1613,
+  "constraint_count": 2734,
+  "operations": [
+    {"id": "read_a", "kind": "memory", "dfunc": 1, "issue": 0, "finish": 1, "pos": -1},
+    {"id": "read_b", "kind": "memory", "dfunc": 1, "issue": 2, "finish": 3, "pos": -1},
+    {"id": "read_c", "kind": "memory", "dfunc": 1, "issue": 4, "finish": 5, "pos": -1},
+    {"id": "vec_add_ab", "kind": "compute", "dfunc": 1, "issue": 7, "finish": 8, "pos": 0},
+    {"id": "relu_ab", "kind": "compute", "dfunc": 1, "issue": 9, "finish": 10, "pos": 0},
+    {"id": "matmul_c", "kind": "compute", "dfunc": 3, "issue": 57, "finish": 60, "pos": 46},
+    {"id": "vec_add_final", "kind": "compute", "dfunc": 1, "issue": 107, "finish": 108, "pos": 0},
+    {"id": "final_write", "kind": "memory", "dfunc": 1, "issue": 110, "finish": 111, "pos": 1}
+  ],
+  "edges": [
+    {"src": "read_a", "dst": "read_b", "stream": 4, "direction": "east", "lo": -1, "hi": -1, "phase": 2},
+    {"src": "read_b", "dst": "read_c", "stream": 20, "direction": "east", "lo": -1, "hi": -1, "phase": 4},
+    {"src": "read_c", "dst": "vec_add_ab", "stream": 8, "direction": "east", "lo": -1, "hi": 0, "phase": 6},
+    {"src": "vec_add_ab", "dst": "relu_ab", "stream": 30, "direction": "east", "lo": 0, "hi": 0, "phase": 8},
+    {"src": "relu_ab", "dst": "matmul_c", "stream": 13, "direction": "east", "lo": 0, "hi": 46, "phase": 10},
+    {"src": "matmul_c", "dst": "vec_add_final", "stream": 3, "direction": "west", "lo": 0, "hi": 46, "phase": 106},
+    {"src": "vec_add_final", "dst": "final_write", "stream": 14, "direction": "east", "lo": 0, "hi": 1, "phase": 108}
+  ]
+}

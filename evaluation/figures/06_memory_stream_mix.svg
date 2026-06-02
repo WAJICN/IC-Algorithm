@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="436" viewBox="0 0 1900 436">
+<rect width="100%" height="100%" fill="white"/>
+<text x="950.00" y="22.00" font-size="16" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">Schedule and Data Routes, makespan=111</text>
+<rect x="70" y="38" width="1800" height="340" fill="#f8fafc" stroke="#cbd5e1"/>
+<line x1="70.00" y1="38" x2="70.00" y2="378" stroke="#e2e8f0"/>
+<line x1="70.00" y1="378" x2="70.00" y2="383" stroke="#334155"/>
+<text x="70.00" y="398.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">0</text>
+<line x1="232.16" y1="38" x2="232.16" y2="378" stroke="#e2e8f0"/>
+<line x1="232.16" y1="378" x2="232.16" y2="383" stroke="#334155"/>
+<text x="232.16" y="398.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">10</text>
+<line x1="394.32" y1="38" x2="394.32" y2="378" stroke="#e2e8f0"/>
+<line x1="394.32" y1="378" x2="394.32" y2="383" stroke="#334155"/>
+<text x="394.32" y="398.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">20</text>
+<line x1="556.49" y1="38" x2="556.49" y2="378" stroke="#e2e8f0"/>
+<line x1="556.49" y1="378" x2="556.49" y2="383" stroke="#334155"/>
+<text x="556.49" y="398.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">30</text>
+<line x1="718.65" y1="38" x2="718.65" y2="378" stroke="#e2e8f0"/>
+<line x1="718.65" y1="378" x2="718.65" y2="383" stroke="#334155"/>
+<text x="718.65" y="398.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">40</text>
+<line x1="880.81" y1="38" x2="880.81" y2="378" stroke="#e2e8f0"/>
+<line x1="880.81" y1="378" x2="880.81" y2="383" stroke="#334155"/>
+<text x="880.81" y="398.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">50</text>
+<line x1="1042.97" y1="38" x2="1042.97" y2="378" stroke="#e2e8f0"/>
+<line x1="1042.97" y1="378" x2="1042.97" y2="383" stroke="#334155"/>
+<text x="1042.97" y="398.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">60</text>
+<line x1="1205.14" y1="38" x2="1205.14" y2="378" stroke="#e2e8f0"/>
+<line x1="1205.14" y1="378" x2="1205.14" y2="383" stroke="#334155"/>
+<text x="1205.14" y="398.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">70</text>
+<line x1="1367.30" y1="38" x2="1367.30" y2="378" stroke="#e2e8f0"/>
+<line x1="1367.30" y1="378" x2="1367.30" y2="383" stroke="#334155"/>
+<text x="1367.30" y="398.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">80</text>
+<line x1="1529.46" y1="38" x2="1529.46" y2="378" stroke="#e2e8f0"/>
+<line x1="1529.46" y1="378" x2="1529.46" y2="383" stroke="#334155"/>
+<text x="1529.46" y="398.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">90</text>
+<line x1="1691.62" y1="38" x2="1691.62" y2="378" stroke="#e2e8f0"/>
+<line x1="1691.62" y1="378" x2="1691.62" y2="383" stroke="#334155"/>
+<text x="1691.62" y="398.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">100</text>
+<line x1="1853.78" y1="38" x2="1853.78" y2="378" stroke="#e2e8f0"/>
+<line x1="1853.78" y1="378" x2="1853.78" y2="383" stroke="#334155"/>
+<text x="1853.78" y="398.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">110</text>
+<line x1="1870.00" y1="38" x2="1870.00" y2="378" stroke="#e2e8f0"/>
+<line x1="1870.00" y1="378" x2="1870.00" y2="383" stroke="#334155"/>
+<text x="1870.00" y="398.00" font-size="11" font-family="Arial, sans-serif" text-anchor="middle" font-weight="400" fill="#111827">111</text>
+<line x1="70" y1="378.00" x2="1870" y2="378.00" stroke="#e2e8f0"/>
+<line x1="65" y1="378.00" x2="70" y2="378.00" stroke="#334155"/>
+<text x="60.00" y="382.00" font-size="11" font-family="Arial, sans-serif" text-anchor="end" font-weight="400" fill="#111827">-1</text>
+<line x1="70" y1="264.67" x2="1870" y2="264.67" stroke="#e2e8f0"/>
+<line x1="65" y1="264.67" x2="70" y2="264.67" stroke="#334155"/>
+<text x="60.00" y="268.67" font-size="11" font-family="Arial, sans-serif" text-anchor="end" font-weight="400" fill="#111827">0</text>
+<line x1="70" y1="151.33" x2="1870" y2="151.33" stroke="#e2e8f0"/>
+<line x1="65" y1="151.33" x2="70" y2="151.33" stroke="#334155"/>
+<text x="60.00" y="155.33" font-size="11" font-family="Arial, sans-serif" text-anchor="end" font-weight="400" fill="#111827">1</text>
+<line x1="70" y1="38.00" x2="1870" y2="38.00" stroke="#e2e8f0"/>
+<line x1="65" y1="38.00" x2="70" y2="38.00" stroke="#334155"/>
+<text x="60.00" y="42.00" font-size="11" font-family="Arial, sans-serif" text-anchor="end" font-weight="400" fill="#111827">46</text>
+<text x="970.00" y="422.00" font-size="13" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">cycle</text>
+<text x="18" y="208.00" font-size="13" font-family="Arial, sans-serif" font-weight="700" fill="#111827" text-anchor="middle" transform="rotate(-90 18 208.00)">pos</text>
+<polyline points="86.22,378.00 102.43,378.00" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>read_a -&gt; read_b, stream 4</title></polyline>
+<polyline points="118.65,378.00 134.86,378.00" fill="none" stroke="#dc2626" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>read_b -&gt; read_c, stream 20</title></polyline>
+<polyline points="151.08,378.00 167.30,264.67 183.51,264.67" fill="none" stroke="#16a34a" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>read_c -&gt; vec_add_ab, stream 8</title></polyline>
+<polyline points="199.73,264.67 215.95,264.67" fill="none" stroke="#9333ea" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>vec_add_ab -&gt; relu_ab, stream 30</title></polyline>
+<polyline points="232.16,264.67 248.38,151.33 978.11,38.00 994.32,38.00" fill="none" stroke="#ea580c" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>relu_ab -&gt; matmul_c, stream 13</title></polyline>
+<polyline points="1042.97,38.00 1772.70,151.33 1788.92,264.67 1805.14,264.67" fill="none" stroke="#0891b2" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>matmul_c -&gt; vec_add_final, stream 3</title></polyline>
+<polyline points="1821.35,264.67 1837.57,151.33 1853.78,151.33" fill="none" stroke="#be123c" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><title>vec_add_final -&gt; final_write, stream 14</title></polyline>
+<line x1="102.43" y1="378.00" x2="102.43" y2="356.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="93.63" y="352.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="102.43" y="364.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e1</text>
+<line x1="134.86" y1="378.00" x2="134.86" y2="356.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="126.06" y="352.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="134.86" y="364.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e2</text>
+<line x1="167.30" y1="264.67" x2="167.30" y2="242.67" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="158.50" y="238.67" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="167.30" y="250.67" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e3</text>
+<line x1="215.95" y1="264.67" x2="215.95" y2="242.67" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="207.15" y="238.67" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="215.95" y="250.67" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e4</text>
+<line x1="978.11" y1="38.00" x2="978.11" y2="48.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="969.31" y="44.00" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="978.11" y="56.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e5</text>
+<line x1="1788.92" y1="264.67" x2="1788.92" y2="242.67" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1780.12" y="238.67" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1788.92" y="250.67" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e6</text>
+<line x1="1837.57" y1="151.33" x2="1837.57" y2="129.33" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1828.77" y="125.33" width="17.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1837.57" y="137.33" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">e7</text>
+<rect x="70.00" y="355.00" width="16.22" height="46.00" rx="4" fill="#2563eb" opacity="0.9"><title>read_a: issue 0, finish 1, pos -1</title></rect>
+<rect x="102.43" y="355.00" width="16.22" height="46.00" rx="4" fill="#dc2626" opacity="0.9"><title>read_b: issue 2, finish 3, pos -1</title></rect>
+<rect x="134.86" y="355.00" width="16.22" height="46.00" rx="4" fill="#16a34a" opacity="0.9"><title>read_c: issue 4, finish 5, pos -1</title></rect>
+<rect x="183.51" y="241.67" width="16.22" height="46.00" rx="4" fill="#9333ea" opacity="0.9"><title>vec_add_ab: issue 7, finish 8, pos 0</title></rect>
+<rect x="215.95" y="241.67" width="16.22" height="46.00" rx="4" fill="#ea580c" opacity="0.9"><title>relu_ab: issue 9, finish 10, pos 0</title></rect>
+<rect x="994.32" y="15.00" width="48.65" height="46.00" rx="4" fill="#0891b2" opacity="0.9"><title>matmul_c: issue 57, finish 60, pos 46</title></rect>
+<rect x="1805.14" y="241.67" width="16.22" height="46.00" rx="4" fill="#be123c" opacity="0.9"><title>vec_add_final: issue 107, finish 108, pos 0</title></rect>
+<rect x="1853.78" y="128.33" width="16.22" height="46.00" rx="4" fill="#4f46e5" opacity="0.9"><title>final_write: issue 110, finish 111, pos 1</title></rect>
+<line x1="78.11" y1="378.00" x2="96.11" y2="327.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="75.71" y="325.00" width="40.80" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="96.11" y="337.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">read_a</text>
+<line x1="110.54" y1="378.00" x2="146.54" y2="327.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="126.14" y="325.00" width="40.80" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="146.54" y="337.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">read_b</text>
+<line x1="142.97" y1="378.00" x2="142.97" y2="297.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="122.57" y="295.00" width="40.80" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="142.97" y="307.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">read_c</text>
+<line x1="191.62" y1="264.67" x2="191.62" y2="213.67" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="159.62" y="211.67" width="64.00" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="191.62" y="223.67" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">vec_add_ab</text>
+<line x1="224.05" y1="264.67" x2="260.05" y2="213.67" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="236.75" y="211.67" width="46.60" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="260.05" y="223.67" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">relu_ab</text>
+<line x1="1813.24" y1="264.67" x2="1813.24" y2="213.67" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1772.54" y="211.67" width="81.40" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1813.24" y="223.67" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">vec_add_final</text>
+<line x1="1861.89" y1="151.33" x2="1825.89" y2="182.33" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="1790.99" y="180.33" width="69.80" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1825.89" y="192.33" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">final_write</text>
+<line x1="1018.65" y1="38.00" x2="1018.65" y2="69.00" stroke="#94a3b8" stroke-width="0.8"/>
+<rect x="992.45" y="67.00" width="52.40" height="15.00" rx="3" fill="#ffffff" opacity="0.86"/>
+<text x="1018.65" y="79.00" font-size="10" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#111827">matmul_c</text>
+</svg>
