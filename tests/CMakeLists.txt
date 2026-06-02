@@ -1,0 +1,11 @@
+add_executable(test_dfg_parser test_dfg_parser.cpp)
+target_link_libraries(test_dfg_parser PRIVATE dfg_ilp)
+add_test(NAME test_dfg_parser COMMAND test_dfg_parser)
+
+add_executable(test_dfg_validator test_dfg_validator.cpp)
+target_link_libraries(test_dfg_validator PRIVATE dfg_ilp)
+add_test(NAME test_dfg_validator COMMAND test_dfg_validator)
+
+add_executable(test_small_solve test_small_solve.cpp)
+target_link_libraries(test_small_solve PRIVATE dfg_ilp)
+add_test(NAME test_small_solve COMMAND test_small_solve)

@@ -1,0 +1,54 @@
+# Binary tree reduction over eight input activations.
+op read_x0 memory 1 slices=-44..-1,1..44
+op read_x1 memory 1 slices=-44..-1,1..44
+op read_x2 memory 1 slices=-44..-1,1..44
+op read_x3 memory 1 slices=-44..-1,1..44
+op read_x4 memory 1 slices=-44..-1,1..44
+op read_x5 memory 1 slices=-44..-1,1..44
+op read_x6 memory 1 slices=-44..-1,1..44
+op read_x7 memory 1 slices=-44..-1,1..44
+
+op mul_x0_w0 compute 2 slices=-46,46
+op mul_x1_w1 compute 2 slices=-46,46
+op mul_x2_w2 compute 2 slices=-46,46
+op mul_x3_w3 compute 2 slices=-46,46
+op mul_x4_w4 compute 2 slices=-46,46
+op mul_x5_w5 compute 2 slices=-46,46
+op mul_x6_w6 compute 2 slices=-46,46
+op mul_x7_w7 compute 2 slices=-46,46
+
+op add_pair_01 compute 1 slices=0
+op add_pair_23 compute 3 slices=0
+op add_pair_45 compute 1 slices=0
+op add_pair_67 compute 3 slices=0
+
+op add_quad_0123 compute 1 slices=0
+op add_quad_4567 compute 4 slices=0
+op relu_reduce_sum compute 1 slices=0
+op write_reduce_sum memory 1 slices=-44..-1,1..44
+
+edge read_x0 mul_x0_w0
+edge read_x1 mul_x1_w1
+edge read_x2 mul_x2_w2
+edge read_x3 mul_x3_w3
+edge read_x4 mul_x4_w4
+edge read_x5 mul_x5_w5
+edge read_x6 mul_x6_w6
+edge read_x7 mul_x7_w7
+
+edge mul_x0_w0 add_pair_01
+edge mul_x1_w1 add_pair_01
+edge mul_x2_w2 add_pair_23
+edge mul_x3_w3 add_pair_23
+edge mul_x4_w4 add_pair_45
+edge mul_x5_w5 add_pair_45
+edge mul_x6_w6 add_pair_67
+edge mul_x7_w7 add_pair_67
+
+edge add_pair_01 add_quad_0123
+edge add_pair_23 add_quad_0123
+edge add_pair_45 add_quad_4567
+edge add_pair_67 add_quad_4567
+edge add_quad_0123 relu_reduce_sum
+edge add_quad_4567 relu_reduce_sum
+edge relu_reduce_sum write_reduce_sum

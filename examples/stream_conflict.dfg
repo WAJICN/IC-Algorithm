@@ -1,0 +1,8 @@
+# Two routes with possible stream/phase interaction.
+op matmul_q compute 1 slices=-46,46
+op relu_q compute 1 slices=0
+op read_k memory 1 slices=-44..-1,1..44
+op write_k memory 1 slices=-44..-1,1..44
+
+edge matmul_q relu_q
+edge read_k write_k

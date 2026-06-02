@@ -1,0 +1,9 @@
+# Includes memory-to-memory lower-bound timing and compute exact timing.
+op read_activation0 memory 1 slices=-44..-1,1..44
+op read_activation1 memory 1 slices=-44..-1,1..44
+op vec_add compute 1 slices=0
+op write_activation memory 1 slices=-44..-1,1..44
+
+edge read_activation0 read_activation1
+edge read_activation1 vec_add
+edge vec_add write_activation

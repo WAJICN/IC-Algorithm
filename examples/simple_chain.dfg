@@ -1,0 +1,7 @@
+# A tiny vector chain.
+op read_x memory 1 slices=-44..-1,1..44
+op relu_x compute 1 slices=0
+op write_x memory 1 slices=-44..-1,1..44
+
+edge read_x relu_x
+edge relu_x write_x

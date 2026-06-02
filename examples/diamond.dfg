@@ -1,0 +1,12 @@
+# Diamond dependency pattern using vector operations.
+op read_input memory 1 slices=-44..-1,1..44
+op relu_input compute 1 slices=0
+op conv_left compute 3 slices=-46
+op conv_right compute 3 slices=46
+op vec_add_join compute 1 slices=0
+
+edge read_input relu_input
+edge relu_input conv_left
+edge relu_input conv_right
+edge conv_left vec_add_join
+edge conv_right vec_add_join
