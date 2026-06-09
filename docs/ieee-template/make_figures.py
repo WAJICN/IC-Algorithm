@@ -107,7 +107,7 @@ def draw_bar(ax, x, values, labels, ylabel, ylim=None):
 
 def save(fig, name):
     OUT.mkdir(parents=True, exist_ok=True)
-    fig.tight_layout(pad=0.35, w_pad=1.15)
+    fig.tight_layout(pad=0.35, w_pad=1.15, rect=(0, 0, 1, 0.91))
     fig.savefig(OUT / f"{name}.pdf", bbox_inches="tight")
     fig.savefig(OUT / f"{name}.png", dpi=240, bbox_inches="tight")
     plt.close(fig)
@@ -133,7 +133,15 @@ def plot_mode_comparison():
     )
     axes[0].set_xticks(x)
     axes[0].set_xticklabels(labels)
-    axes[0].legend(handles=handles, loc="upper center", ncol=2, frameon=False)
+    axes[0].legend(
+        handles=handles,
+        loc="lower center",
+        bbox_to_anchor=(0.5, 1.02),
+        ncol=2,
+        frameon=False,
+        handlelength=1.6,
+        columnspacing=0.8,
+    )
 
     axes[1].bar(x, speedups, 0.45, facecolor=BAR_FACE, edgecolor="none", zorder=1)
     axes[1].bar(
@@ -191,7 +199,15 @@ def plot_scalability():
     axes[1].set_xticks(np.arange(len(rows)))
     axes[1].set_xticklabels([str(v) for v in ops])
     axes[1].set_xlabel("Operations")
-    axes[1].legend(handles=handles, loc="upper center", ncol=1, frameon=False)
+    axes[1].legend(
+        handles=handles,
+        loc="lower center",
+        bbox_to_anchor=(0.5, 1.02),
+        ncol=2,
+        frameon=False,
+        handlelength=1.6,
+        columnspacing=0.8,
+    )
     save(fig, "scalability")
 
 
