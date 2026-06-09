@@ -1,0 +1,27 @@
+{
+  "mode": "graph_preprocessed",
+  "status": "infeasible",
+  "objective_value": 0.000000,
+  "makespan": 0,
+  "variable_count": 12442,
+  "constraint_count": 34448,
+  "solve_time_ms": 321,
+  "preprocess_time_ms": 0,
+  "preprocess": {
+    "total_op_pairs": 276,
+    "active_op_pairs": 187,
+    "pruned_op_pairs": 89,
+    "pair_reduction_rate": 0.322464,
+    "average_issue_window": 1937.208333
+  },
+  "domain_check": {
+    "ok": true,
+    "error_count": 0,
+    "errors": [
+    ]
+  },
+  "operations": [
+  ],
+  "edges": [
+  ]
+}

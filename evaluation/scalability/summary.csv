@@ -1,0 +1,5 @@
+workload,ops,status,makespan,variable_count,constraint_count,solve_time_ms,pair_reduction_rate,domain_check_ok,domain_check_errors
+scale_025,25,optimal,75,12054,31215,1369,1.0,True,0
+scale_050,50,optimal,149,49104,131715,11582,1.0,True,0
+scale_075,75,feasible,189,53829,140990,60183,0.441441,True,0
+scale_100,100,feasible,239,60429,154015,60177,0.247475,True,0

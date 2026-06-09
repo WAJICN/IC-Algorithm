@@ -30,7 +30,9 @@ add_library(dfg_ilp
   dfg/parser.cpp
   dfg/validator.cpp
   model/variables.cpp
+  model/preprocess.cpp
   model/solution.cpp
+  model/solution_checker.cpp
   model/objective.cpp
   model/ilp_solver.cpp
   model/constraints/timing.cpp

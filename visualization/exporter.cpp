@@ -65,12 +65,34 @@ bool WriteSolutionJson(const SolveResult& result, const std::string& path,
   }
 
   out << "{\n";
+  out << "  \"mode\": \"" << JsonEscape(ToString(result.mode)) << "\",\n";
   out << "  \"status\": \"" << JsonEscape(ToString(result.status)) << "\",\n";
   out << "  \"objective_value\": " << std::fixed << std::setprecision(6)
       << result.objective_value << ",\n";
   out << "  \"makespan\": " << result.makespan << ",\n";
   out << "  \"variable_count\": " << result.variable_count << ",\n";
   out << "  \"constraint_count\": " << result.constraint_count << ",\n";
+  out << "  \"solve_time_ms\": " << result.solve_time_ms << ",\n";
+  out << "  \"preprocess_time_ms\": " << result.preprocess_time_ms << ",\n";
+  out << "  \"preprocess\": {\n";
+  out << "    \"total_op_pairs\": " << result.total_op_pairs << ",\n";
+  out << "    \"active_op_pairs\": " << result.active_op_pairs << ",\n";
+  out << "    \"pruned_op_pairs\": " << result.pruned_op_pairs << ",\n";
+  out << "    \"pair_reduction_rate\": " << std::fixed << std::setprecision(6)
+      << result.pair_reduction_rate << ",\n";
+  out << "    \"average_issue_window\": " << std::fixed << std::setprecision(6)
+      << result.average_issue_window << "\n";
+  out << "  },\n";
+  out << "  \"domain_check\": {\n";
+  out << "    \"ok\": " << (result.domain_check_ok ? "true" : "false") << ",\n";
+  out << "    \"error_count\": " << result.domain_check_errors.size() << ",\n";
+  out << "    \"errors\": [\n";
+  for (std::size_t i = 0; i < result.domain_check_errors.size(); ++i) {
+    out << "      \"" << JsonEscape(result.domain_check_errors[i]) << "\"";
+    out << (i + 1 == result.domain_check_errors.size() ? "\n" : ",\n");
+  }
+  out << "    ]\n";
+  out << "  },\n";
   out << "  \"operations\": [\n";
   for (std::size_t i = 0; i < result.operations.size(); ++i) {
     const OpAssignment& op = result.operations[i];

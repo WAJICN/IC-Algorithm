@@ -50,6 +50,7 @@ struct VariableContext {
   std::map<OpPairKey, MPVariable*> pos_order;
   std::map<OpPairKey, MPVariable*> issue_order;
   std::map<OpPairKey, MPVariable*> same_slice_same_cycle;
+  std::map<OpPairKey, MPVariable*> op_interval_order;
 
   std::vector<MPVariable*> east;
   std::vector<MPVariable*> west;
@@ -73,10 +74,21 @@ struct VariableContext {
 };
 
 void CreateCoreVariables(const Dfg& graph, const Hardware& hw,
-                         VariableContext* vars);
-void CreateSliceIcuVariables(const Dfg& graph, VariableContext* vars);
+                         VariableContext* vars,
+                         const std::vector<int>* issue_lower_bounds = nullptr,
+                         const std::vector<int>* issue_upper_bounds = nullptr);
+void CreateSliceIcuVariables(const std::vector<OpPairKey>& distance_pairs,
+                             const std::vector<OpPairKey>& resource_pairs,
+                             VariableContext* vars);
 void CreateStreamVariables(const Dfg& graph, const Hardware& hw,
                            VariableContext* vars);
+
+std::vector<OpPairKey> AllOperationPairs(const Dfg& graph);
+std::vector<OpPairKey> EdgeEndpointPairs(const Dfg& graph);
+std::vector<OpPairKey> MergeOperationPairs(const std::vector<OpPairKey>& first,
+                                           const std::vector<OpPairKey>& second);
+std::vector<OpPairKey> SafeGraphResourcePairs(
+    const Dfg& graph, const std::vector<OpPairKey>& incomparable_pairs);
 
 std::string VarName(const std::string& prefix, int a);
 std::string VarName(const std::string& prefix, int a, int b);

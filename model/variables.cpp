@@ -1,6 +1,7 @@
 #include "model/variables.h"
 
 #include <algorithm>
+#include <set>
 #include <sstream>
 #include <stdexcept>
 
@@ -38,18 +39,34 @@ std::string VarName(const std::string& prefix, int a, int b, int c) {
 }
 
 void CreateCoreVariables(const Dfg& graph, const Hardware& hw,
-                         VariableContext* vars) {
+                         VariableContext* vars,
+                         const std::vector<int>* issue_lower_bounds,
+                         const std::vector<int>* issue_upper_bounds) {
   MPSolver* solver = vars->solver;
   const double infinity = solver->infinity();
   const int n = graph.NumOps();
+
+  if (issue_lower_bounds && static_cast<int>(issue_lower_bounds->size()) != n) {
+    throw std::runtime_error("issue lower-bound vector size does not match DFG");
+  }
+  if (issue_upper_bounds && static_cast<int>(issue_upper_bounds->size()) != n) {
+    throw std::runtime_error("issue upper-bound vector size does not match DFG");
+  }
 
   vars->issue.resize(n);
   vars->pos.resize(n);
   vars->place.resize(n);
 
   for (int i = 0; i < n; ++i) {
+    const int issue_lb = issue_lower_bounds ? issue_lower_bounds->at(i) : 0;
+    const int issue_ub =
+        issue_upper_bounds ? issue_upper_bounds->at(i) : hw.max_issue_time;
+    if (issue_lb > issue_ub) {
+      throw std::runtime_error("empty issue window for operation '" +
+                               graph.operation(i).id + "'");
+    }
     vars->issue[i] =
-        solver->MakeIntVar(0.0, hw.max_issue_time, VarName("issue", i));
+        solver->MakeIntVar(issue_lb, issue_ub, VarName("issue", i));
     vars->pos[i] =
         solver->MakeIntVar(hw.min_slice, hw.max_slice, VarName("pos", i));
 
@@ -66,22 +83,19 @@ void CreateCoreVariables(const Dfg& graph, const Hardware& hw,
   vars->makespan = solver->MakeIntVar(0.0, infinity, "makespan");
 }
 
-void CreateSliceIcuVariables(const Dfg& graph, VariableContext* vars) {
+void CreateSliceIcuVariables(const std::vector<OpPairKey>& distance_pairs,
+                             const std::vector<OpPairKey>& resource_pairs,
+                             VariableContext* vars) {
   MPSolver* solver = vars->solver;
-  const int n = graph.NumOps();
-  for (int i = 0; i < n; ++i) {
-    for (int j = i + 1; j < n; ++j) {
-      const OpPairKey key{i, j};
-      vars->abs_pos_delta[key] =
-          solver->MakeIntVar(0.0, solver->infinity(), VarName("abs_pos", i, j));
-      vars->abs_issue_delta[key] = solver->MakeIntVar(
-          0.0, solver->infinity(), VarName("abs_issue", i, j));
-      vars->pos_order[key] = solver->MakeBoolVar(VarName("pos_order", i, j));
-      vars->issue_order[key] =
-          solver->MakeBoolVar(VarName("issue_order", i, j));
-      vars->same_slice_same_cycle[key] =
-          solver->MakeBoolVar(VarName("same_slice_cycle", i, j));
-    }
+  for (const OpPairKey& key : distance_pairs) {
+    vars->abs_pos_delta[key] = solver->MakeIntVar(
+        0.0, solver->infinity(), VarName("abs_pos", key.first, key.second));
+    vars->pos_order[key] =
+        solver->MakeBoolVar(VarName("pos_order", key.first, key.second));
+  }
+  for (const OpPairKey& key : resource_pairs) {
+    vars->op_interval_order[key] =
+        solver->MakeBoolVar(VarName("op_before", key.first, key.second));
   }
 }
 
@@ -129,6 +143,50 @@ void CreateStreamVariables(const Dfg& graph, const Hardware& hw,
       }
     }
   }
+}
+
+std::vector<OpPairKey> AllOperationPairs(const Dfg& graph) {
+  std::vector<OpPairKey> pairs;
+  const int n = graph.NumOps();
+  pairs.reserve(n * (n - 1) / 2);
+  for (int i = 0; i < n; ++i) {
+    for (int j = i + 1; j < n; ++j) {
+      pairs.push_back(OpPairKey{i, j});
+    }
+  }
+  return pairs;
+}
+
+std::vector<OpPairKey> EdgeEndpointPairs(const Dfg& graph) {
+  std::vector<OpPairKey> pairs;
+  pairs.reserve(graph.NumEdges());
+  for (const Edge& edge : graph.edges()) {
+    pairs.push_back(OpPairKey{std::min(edge.src, edge.dst),
+                              std::max(edge.src, edge.dst)});
+  }
+  return MergeOperationPairs(pairs, {});
+}
+
+std::vector<OpPairKey> MergeOperationPairs(const std::vector<OpPairKey>& first,
+                                           const std::vector<OpPairKey>& second) {
+  std::set<OpPairKey> unique_pairs;
+  unique_pairs.insert(first.begin(), first.end());
+  unique_pairs.insert(second.begin(), second.end());
+  return std::vector<OpPairKey>(unique_pairs.begin(), unique_pairs.end());
+}
+
+std::vector<OpPairKey> SafeGraphResourcePairs(
+    const Dfg& graph, const std::vector<OpPairKey>& incomparable_pairs) {
+  std::vector<OpPairKey> pairs = incomparable_pairs;
+  for (const Edge& edge : graph.edges()) {
+    const Operation& src = graph.operation(edge.src);
+    const Operation& dst = graph.operation(edge.dst);
+    if (src.kind == OpKind::kMemory && dst.kind == OpKind::kMemory) {
+      pairs.push_back(OpPairKey{std::min(edge.src, edge.dst),
+                                std::max(edge.src, edge.dst)});
+    }
+  }
+  return MergeOperationPairs(pairs, {});
 }
 
 }  // namespace dfg_ilp

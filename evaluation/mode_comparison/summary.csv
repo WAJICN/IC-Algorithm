@@ -1,0 +1,13 @@
+workload,mode,status,makespan,variable_count,constraint_count,solve_time_ms,preprocess_time_ms,total_op_pairs,active_op_pairs,pruned_op_pairs,pair_reduction_rate,average_issue_window,domain_check_ok,domain_check_errors
+01_vector_pipeline,baseline,optimal,14,823,1461,1302,0,15,15,0,0.0,2000.0,True,0
+01_vector_pipeline,graph,optimal,14,788,1233,372,0,15,0,15,1.0,1987.0,True,0
+02_cnn_pipeline,baseline,optimal,320,4697,11076,1779,0,105,105,0,0.0,2000.0,True,0
+02_cnn_pipeline,graph,optimal,320,4410,10440,2316,0,105,0,105,1.0,1681.0,True,0
+03_residual_block,baseline,optimal,164,2512,5579,2493,0,45,45,0,0.0,2000.0,True,0
+03_residual_block,graph,optimal,164,2412,5259,2709,0,45,5,40,0.888889,1845.8,True,0
+04_binary_tree_reduce,baseline,infeasible,0,12663,36140,340,0,276,276,0,0.0,2000.0,True,0
+04_binary_tree_reduce,graph,infeasible,0,12442,34448,321,0,276,187,89,0.322464,1937.208333,True,0
+05_transform_attention,baseline,optimal,184,3539,8113,4973,0,78,78,0,0.0,2000.0,True,0
+05_transform_attention,graph,optimal,184,3329,7617,4392,0,78,0,78,1.0,1817.0,True,0
+06_memory_stream_mix,baseline,optimal,111,1557,3648,1673,0,28,28,0,0.0,2000.0,True,0
+06_memory_stream_mix,graph,optimal,111,1489,2854,1779,0,28,2,26,0.928571,1890.0,True,0

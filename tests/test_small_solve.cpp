@@ -6,11 +6,18 @@
 #include "model/hardware.h"
 #include "model/ilp_solver.h"
 
+bool IsSolved(const dfg_ilp::SolveResult& result) {
+  return result.status == dfg_ilp::SolveStatus::kOptimal ||
+         result.status == dfg_ilp::SolveStatus::kFeasible;
+}
+
 int main() {
   const char* text = R"(
 op a compute 1 slices=-1..1
 op b compute 1 slices=-1..1
+op c compute 1 slices=-1..1
 edge a b
+edge a c
 )";
   const dfg_ilp::ParseResult parse = dfg_ilp::ParseDfgText(text, "inline");
   if (!parse.ok) {
@@ -20,20 +27,55 @@ edge a b
 
   dfg_ilp::Hardware hardware;
   hardware.max_issue_time = 20;
-  dfg_ilp::SolverConfig config;
-  config.time_limit_ms = 5000;
+  dfg_ilp::SolverConfig baseline_config;
+  baseline_config.time_limit_ms = 5000;
+  baseline_config.mode = dfg_ilp::SolverMode::kBaseline;
 
-  dfg_ilp::IlpSolver solver(hardware, config);
-  const dfg_ilp::SolveResult result = solver.Solve(parse.graph);
-  if (result.status != dfg_ilp::SolveStatus::kOptimal &&
-      result.status != dfg_ilp::SolveStatus::kFeasible) {
-    std::cerr << "unexpected solve status: " << dfg_ilp::ToString(result.status)
+  dfg_ilp::IlpSolver baseline_solver(hardware, baseline_config);
+  const dfg_ilp::SolveResult result = baseline_solver.Solve(parse.graph);
+  if (!IsSolved(result)) {
+    std::cerr << "unexpected baseline solve status: "
+              << dfg_ilp::ToString(result.status)
               << '\n';
     return 1;
   }
-  if (result.operations.size() != 2 || result.makespan <= 0) {
+  if (result.operations.size() != 3 || result.makespan <= 0) {
     std::cerr << "invalid solution shape\n";
     return 1;
+  }
+  if (result.mode != dfg_ilp::SolverMode::kBaseline ||
+      result.total_op_pairs != 3 || result.active_op_pairs != 3 ||
+      result.pruned_op_pairs != 0 || !result.domain_check_ok) {
+    std::cerr << "invalid baseline metrics\n";
+    return 1;
+  }
+
+  dfg_ilp::SolverConfig graph_config;
+  graph_config.time_limit_ms = 5000;
+  graph_config.mode = dfg_ilp::SolverMode::kGraphPreprocessed;
+  dfg_ilp::IlpSolver graph_solver(hardware, graph_config);
+  const dfg_ilp::SolveResult graph_result = graph_solver.Solve(parse.graph);
+  if (!IsSolved(graph_result)) {
+    std::cerr << "unexpected graph solve status: "
+              << dfg_ilp::ToString(graph_result.status) << '\n';
+    return 1;
+  }
+  if (graph_result.mode != dfg_ilp::SolverMode::kGraphPreprocessed ||
+      graph_result.total_op_pairs != 3 || graph_result.active_op_pairs > result.active_op_pairs ||
+      !graph_result.domain_check_ok) {
+    std::cerr << "invalid graph preprocessing metrics\n";
+    return 1;
+  }
+
+  for (std::size_t i = 0; i < graph_result.operations.size(); ++i) {
+    for (std::size_t j = i + 1; j < graph_result.operations.size(); ++j) {
+      const dfg_ilp::OpAssignment& a = graph_result.operations[i];
+      const dfg_ilp::OpAssignment& b = graph_result.operations[j];
+      if (a.pos == b.pos && a.finish > b.issue && b.finish > a.issue) {
+        std::cerr << "same-slice interval overlap in graph solution\n";
+        return 1;
+      }
+    }
   }
 
   std::map<std::string, dfg_ilp::OpAssignment> by_id;

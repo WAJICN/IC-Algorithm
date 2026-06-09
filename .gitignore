@@ -2,3 +2,5 @@ build/
 outputs/
 venv/
 .codex
+docs/ieee-template/.venv/
+evaluation/scripts/__pycache__/

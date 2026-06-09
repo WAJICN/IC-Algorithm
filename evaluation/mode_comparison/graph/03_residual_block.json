@@ -1,0 +1,47 @@
+{
+  "mode": "graph_preprocessed",
+  "status": "optimal",
+  "objective_value": 164.000000,
+  "makespan": 164,
+  "variable_count": 2412,
+  "constraint_count": 5259,
+  "solve_time_ms": 2709,
+  "preprocess_time_ms": 0,
+  "preprocess": {
+    "total_op_pairs": 45,
+    "active_op_pairs": 5,
+    "pruned_op_pairs": 40,
+    "pair_reduction_rate": 0.888889,
+    "average_issue_window": 1845.800000
+  },
+  "domain_check": {
+    "ok": true,
+    "error_count": 0,
+    "errors": [
+    ]
+  },
+  "operations": [
+    {"id": "input_read", "kind": "memory", "dfunc": 1, "issue": 0, "finish": 1, "pos": -44},
+    {"id": "conv1", "kind": "compute", "dfunc": 3, "issue": 4, "finish": 7, "pos": -46},
+    {"id": "batch_norm1", "kind": "compute", "dfunc": 2, "issue": 54, "finish": 56, "pos": 0},
+    {"id": "relu1", "kind": "compute", "dfunc": 1, "issue": 57, "finish": 58, "pos": 0},
+    {"id": "conv2", "kind": "compute", "dfunc": 3, "issue": 105, "finish": 108, "pos": -46},
+    {"id": "batch_norm2", "kind": "compute", "dfunc": 2, "issue": 155, "finish": 157, "pos": 0},
+    {"id": "skip_projection", "kind": "compute", "dfunc": 19, "issue": 92, "finish": 111, "pos": 46},
+    {"id": "residual_add", "kind": "compute", "dfunc": 1, "issue": 158, "finish": 159, "pos": 0},
+    {"id": "relu_out", "kind": "compute", "dfunc": 1, "issue": 160, "finish": 161, "pos": 0},
+    {"id": "output_write", "kind": "memory", "dfunc": 1, "issue": 163, "finish": 164, "pos": 1}
+  ],
+  "edges": [
+    {"src": "input_read", "dst": "conv1", "stream": 21, "direction": "west", "lo": -46, "hi": -44, "phase": -43},
+    {"src": "conv1", "dst": "batch_norm1", "stream": 8, "direction": "east", "lo": -46, "hi": 0, "phase": 53},
+    {"src": "batch_norm1", "dst": "relu1", "stream": 25, "direction": "east", "lo": 0, "hi": 0, "phase": 56},
+    {"src": "relu1", "dst": "conv2", "stream": 8, "direction": "west", "lo": -46, "hi": 0, "phase": 58},
+    {"src": "conv2", "dst": "batch_norm2", "stream": 31, "direction": "east", "lo": -46, "hi": 0, "phase": 154},
+    {"src": "input_read", "dst": "skip_projection", "stream": 29, "direction": "east", "lo": -44, "hi": 46, "phase": 45},
+    {"src": "batch_norm2", "dst": "residual_add", "stream": 6, "direction": "east", "lo": 0, "hi": 0, "phase": 157},
+    {"src": "skip_projection", "dst": "residual_add", "stream": 26, "direction": "west", "lo": 0, "hi": 46, "phase": 157},
+    {"src": "residual_add", "dst": "relu_out", "stream": 23, "direction": "west", "lo": 0, "hi": 0, "phase": 159},
+    {"src": "relu_out", "dst": "output_write", "stream": 9, "direction": "east", "lo": 0, "hi": 1, "phase": 161}
+  ]
+}

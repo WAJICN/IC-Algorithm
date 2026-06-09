@@ -36,42 +36,56 @@ void AddAbsEquals(VariableContext* vars, MPVariable* abs_value, MPVariable* lhs,
   c4->SetCoefficient(order, -big_m);
 }
 
+std::vector<int> SharedSlices(const VariableContext& vars, int first, int second) {
+  std::vector<int> slices;
+  for (const auto& [slice, y] : vars.place[first]) {
+    if (vars.place[second].find(slice) != vars.place[second].end()) {
+      slices.push_back(slice);
+    }
+  }
+  return slices;
+}
+
 }  // namespace
 
 void AddSliceIcuConstraints(const Dfg& graph, const Hardware& hw,
+                            const std::vector<OpPairKey>& distance_pairs,
+                            const std::vector<OpPairKey>& resource_pairs,
                             VariableContext* vars) {
   const int n = graph.NumOps();
-  for (int i = 0; i < n; ++i) {
-    for (int j = i + 1; j < n; ++j) {
-      const OpPairKey key{i, j};
-      AddAbsEquals(vars, vars->abs_pos_delta.at(key), vars->pos[i], vars->pos[j],
-                   vars->pos_order.at(key), hw.big_m, "abs_pos", i, j);
-      AddAbsEquals(vars, vars->abs_issue_delta.at(key), vars->issue[i],
-                   vars->issue[j], vars->issue_order.at(key), hw.big_m,
-                   "abs_issue", i, j);
-
-      operations_research::MPConstraint* no_conflict =
-          vars->solver->MakeRowConstraint(1.0, vars->solver->infinity(),
-                                          VarName("slice_cycle_no_conflict", i, j));
-      no_conflict->SetCoefficient(vars->abs_pos_delta.at(key), 1.0);
-      no_conflict->SetCoefficient(vars->abs_issue_delta.at(key), 1.0);
-      no_conflict->SetCoefficient(vars->same_slice_same_cycle.at(key), hw.big_m);
-    }
+  for (const OpPairKey& key : distance_pairs) {
+    AddAbsEquals(vars, vars->abs_pos_delta.at(key), vars->pos[key.first],
+                 vars->pos[key.second], vars->pos_order.at(key), hw.big_m,
+                 "abs_pos", key.first, key.second);
   }
 
-  for (int i = 0; i < n; ++i) {
-    operations_research::MPConstraint* cap = vars->solver->MakeRowConstraint(
-        -vars->solver->infinity(), -1.0,
-        VarName("icu_capacity", i));
-    for (int j = 0; j < n; ++j) {
-      if (i == j) {
-        continue;
-      }
-      const OpPairKey key{std::min(i, j), std::max(i, j)};
-      cap->SetCoefficient(vars->same_slice_same_cycle.at(key), 1.0);
-    }
-    for (const auto& [slice, y] : vars->place[i]) {
-      cap->SetCoefficient(y, -hw.IcuCapacity(slice));
+  for (const OpPairKey& key : resource_pairs) {
+    const int i = key.first;
+    const int j = key.second;
+    for (const int slice : SharedSlices(*vars, i, j)) {
+      operations_research::MPConstraint* i_before_j =
+          vars->solver->MakeRowConstraint(
+              -vars->solver->infinity(), 3.0 * hw.big_m,
+              VarName("non_overlap_i_before_j", i, j, slice));
+      i_before_j->SetCoefficient(vars->issue[i], 1.0);
+      i_before_j->SetCoefficient(vars->issue[j], -1.0);
+      i_before_j->SetCoefficient(vars->place[i].at(slice), hw.big_m);
+      i_before_j->SetCoefficient(vars->place[j].at(slice), hw.big_m);
+      i_before_j->SetCoefficient(vars->op_interval_order.at(key), hw.big_m);
+      i_before_j->SetBounds(-vars->solver->infinity(),
+                            3.0 * hw.big_m - graph.operation(i).dfunc);
+
+      operations_research::MPConstraint* j_before_i =
+          vars->solver->MakeRowConstraint(
+              -vars->solver->infinity(), 2.0 * hw.big_m,
+              VarName("non_overlap_j_before_i", i, j, slice));
+      j_before_i->SetCoefficient(vars->issue[j], 1.0);
+      j_before_i->SetCoefficient(vars->issue[i], -1.0);
+      j_before_i->SetCoefficient(vars->place[i].at(slice), hw.big_m);
+      j_before_i->SetCoefficient(vars->place[j].at(slice), hw.big_m);
+      j_before_i->SetCoefficient(vars->op_interval_order.at(key), -hw.big_m);
+      j_before_i->SetBounds(-vars->solver->infinity(),
+                            2.0 * hw.big_m - graph.operation(j).dfunc);
     }
   }
 }

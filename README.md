@@ -45,6 +45,36 @@ Optional solver flags:
   --time_limit_ms 10000 --solver SCIP
 ```
 
+Select the solver mode:
+
+```bash
+# Direct ILP baseline. This is the default.
+./build/solve examples/simple_chain.dfg outputs/baseline/simple_chain.json \
+  --mode baseline
+
+# Graph-preprocessed ILP with ASAP/ALAP bounds and incomparable-pair pruning.
+./build/solve examples/simple_chain.dfg outputs/graph/simple_chain.json \
+  --mode graph
+```
+
+Compare both modes on the evaluation workloads:
+
+```bash
+python3 evaluation/scripts/compare_modes.py
+```
+
+The comparison script writes per-mode JSON files and a CSV summary under
+`evaluation/mode_comparison/`.
+
+Generate and run scalability workloads in graph-preprocessed mode:
+
+```bash
+python3 evaluation/scripts/run_scalability.py
+```
+
+Use `SIZES=25,50,75,100` and `TIME_LIMIT_MS=60000` environment variables to
+control the scalability run.
+
 ## DFG Format
 
 See `docs/dfg_format.md`.
