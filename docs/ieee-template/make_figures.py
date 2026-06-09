@@ -29,7 +29,7 @@ def setup_style():
             "axes.titlesize": 10.8,
             "xtick.labelsize": 10.2,
             "ytick.labelsize": 10.2,
-            "legend.fontsize": 9.7,
+            "legend.fontsize": 12.2,
             "font.family": "sans-serif",
             "font.sans-serif": FONT_FAMILY,
             "hatch.linewidth": 0.8,
