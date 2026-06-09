@@ -24,16 +24,16 @@ def setup_style():
     plt.style.use("default")
     plt.rcParams.update(
         {
-            "font.size": 17,
-            "axes.labelsize": 20,
-            "axes.titlesize": 18,
-            "xtick.labelsize": 17,
-            "ytick.labelsize": 17,
-            "legend.fontsize": 16,
+            "font.size": 8.5,
+            "axes.labelsize": 10,
+            "axes.titlesize": 9,
+            "xtick.labelsize": 8.5,
+            "ytick.labelsize": 8.5,
+            "legend.fontsize": 8,
             "font.family": "sans-serif",
             "font.sans-serif": FONT_FAMILY,
-            "hatch.linewidth": 1.0,
-            "axes.linewidth": 1.4,
+            "hatch.linewidth": 0.8,
+            "axes.linewidth": 0.9,
             "pdf.fonttype": 42,
             "ps.fonttype": 42,
         }
@@ -93,7 +93,7 @@ def draw_bar(ax, x, values, labels, ylabel, ylim=None):
             width,
             facecolor="none",
             edgecolor=BAR_EDGE,
-            linewidth=1.4,
+            linewidth=0.9,
             zorder=3,
         )
         handles.append(
@@ -102,21 +102,21 @@ def draw_bar(ax, x, values, labels, ylabel, ylim=None):
                 edgecolor=COLORS[idx],
                 hatch=HATCHES[idx],
                 label=label,
-                linewidth=1.4,
+                linewidth=0.9,
             )
         )
     ax.set_ylabel(ylabel)
     if ylim:
         ax.set_ylim(ylim)
     ax.grid(True, axis="y", linestyle="--", color=GRID_COLOR, alpha=0.45, zorder=0)
-    ax.tick_params(axis="both", direction="in", top=True, right=True, length=5)
+    ax.tick_params(axis="both", direction="in", top=True, right=True, length=3)
     return handles
 
 
 def save(fig, name, tight=True):
     OUT.mkdir(parents=True, exist_ok=True)
     if tight:
-        fig.tight_layout(pad=0.4, w_pad=1.3, rect=(0, 0, 1, 0.88))
+        fig.tight_layout(pad=0.35, w_pad=1.15, rect=(0, 0, 1, 0.91))
     fig.savefig(OUT / f"{name}.pdf", bbox_inches="tight")
     fig.savefig(OUT / f"{name}.png", dpi=240, bbox_inches="tight")
     plt.close(fig)
@@ -132,7 +132,7 @@ def plot_mode_comparison():
         [int(b["solve_time_ms"]) / max(1, int(g["solve_time_ms"])) for _, b, g in rows]
     )
 
-    fig, axes = plt.subplots(1, 2, figsize=(8.8, 3.25))
+    fig, axes = plt.subplots(1, 2, figsize=(7.0, 2.35))
     handles = draw_bar(
         axes[0],
         x,
@@ -148,8 +148,8 @@ def plot_mode_comparison():
         bbox_to_anchor=(0.5, 1.02),
         ncol=2,
         frameon=False,
-        handlelength=1.8,
-        columnspacing=1.0,
+        handlelength=1.6,
+        columnspacing=0.8,
     )
 
     axes[1].bar(x, speedups, 0.45, facecolor=BAR_FACE, edgecolor="none", zorder=1)
@@ -169,16 +169,16 @@ def plot_mode_comparison():
         0.45,
         facecolor="none",
         edgecolor=BAR_EDGE,
-        linewidth=1.4,
+        linewidth=0.9,
         zorder=3,
     )
-    axes[1].axhline(1.0, color="grey", linestyle="--", linewidth=1.3)
+    axes[1].axhline(1.0, color="grey", linestyle="--", linewidth=0.9)
     axes[1].set_ylabel("Speedup")
     axes[1].set_xticks(x)
     axes[1].set_xticklabels(labels)
     axes[1].set_ylim(0, max(3.8, speedups.max() * 1.18))
     axes[1].grid(True, axis="y", linestyle="--", color=GRID_COLOR, alpha=0.45, zorder=0)
-    axes[1].tick_params(axis="both", direction="in", top=True, right=True, length=5)
+    axes[1].tick_params(axis="both", direction="in", top=True, right=True, length=3)
     save(fig, "mode_comparison")
 
 
@@ -190,13 +190,13 @@ def plot_scalability():
     constraints = np.array([int(r["constraint_count"]) for r in rows]) / 1000.0
     pair_reduction = np.array([float(r["pair_reduction_rate"]) for r in rows]) * 100.0
 
-    fig, axes = plt.subplots(1, 2, figsize=(8.8, 3.25))
-    axes[0].plot(ops, solve_ms, color="black", marker="o", linewidth=1.8, markersize=6)
+    fig, axes = plt.subplots(1, 2, figsize=(7.0, 2.35))
+    axes[0].plot(ops, solve_ms, color="black", marker="o", linewidth=1.2, markersize=4)
     axes[0].set_xlabel("Operations")
     axes[0].set_ylabel("Solve time (s)")
     axes[0].set_ylim(0, 68)
     axes[0].grid(True, axis="y", linestyle="--", color=GRID_COLOR, alpha=0.45)
-    axes[0].tick_params(axis="both", direction="in", top=True, right=True, length=5)
+    axes[0].tick_params(axis="both", direction="in", top=True, right=True, length=3)
 
     handles = draw_bar(
         axes[1],
@@ -214,8 +214,8 @@ def plot_scalability():
         bbox_to_anchor=(0.5, 1.02),
         ncol=2,
         frameon=False,
-        handlelength=1.8,
-        columnspacing=1.0,
+        handlelength=1.6,
+        columnspacing=0.8,
     )
     save(fig, "scalability")
 
@@ -330,7 +330,6 @@ def main():
     setup_style()
     plot_mode_comparison()
     plot_scalability()
-    plot_results_overview()
     print(f"wrote figures to {OUT}")
 
 

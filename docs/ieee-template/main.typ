@@ -140,10 +140,15 @@ The existing workload set contains vector, CNN-style, residual, transformer-atte
 
 #figure(
   placement: top,
-  scope: "parent",
-  image("figures/results_overview.pdf", width: 100%),
-  caption: [Experimental overview. Graph preprocessing reduces model size on solved existing workloads; solve-time speedup is workload-dependent. Generated scalability workloads reach 100 operations with domain-checked feasible schedules.]
-) <fig:results>
+  image("figures/mode_comparison.pdf", width: 100%),
+  caption: [Existing workload comparison. Graph preprocessing preserves makespan on solved workloads and reduces model constraints; solve-time speedup is workload-dependent.]
+) <fig:mode>
+
+#figure(
+  placement: top,
+  image("figures/scalability.pdf", width: 100%),
+  caption: [Generated scalability workloads. The 75- and 100-operation cases reach feasible schedules at the 60 s limit and pass the domain checker.]
+) <fig:scale>
 
 #figure(
   placement: top,
@@ -164,13 +169,13 @@ The existing workload set contains vector, CNN-style, residual, transformer-atte
   caption: [Existing workloads under full-duration non-overlap. `Tree reduce` is infeasible in both modes, revealing a legacy workload invalidated by stricter resource semantics.]
 ) <tab:existing>
 
-@fig:results and @tab:existing show that the graph mode reduces constraints on all solved existing workloads while preserving makespan. The largest measured solve-time speedup is 3.50x on the vector pipeline, but CNN, residual, and memory-mix workloads are not faster under the stronger model. Thus the supported performance claim is model-size reduction with workload-dependent speed, not universal acceleration.
+@fig:mode and @tab:existing show that the graph mode reduces constraints on all solved existing workloads while preserving makespan. The largest measured solve-time speedup is 3.50x on the vector pipeline, but CNN, residual, and memory-mix workloads are not faster under the stronger model. Thus the supported performance claim is model-size reduction with workload-dependent speed, not universal acceleration.
 
 This distinction is important. Reducing constraints does not guarantee faster branch-and-bound search because the remaining formulation may expose a harder search tree or different LP relaxations. We therefore report speedup as an observed metric rather than as a claim guaranteed by preprocessing. The functional claim is stronger: graph mode preserves the objective value on solved workloads and every accepted schedule passes the same checker.
 
 The infeasible tree-reduction result is also informative. Under the earlier same-issue-cycle conflict model, the workload could place long operations on the same slice with overlapping execution intervals as long as their issue cycles differed. Full-duration non-overlap invalidates that schedule in both baseline and graph modes. We therefore treat this workload as a legacy negative test rather than as performance evidence.
 
-The scalability study in @fig:results reaches 100 operations. The 25- and 50-operation cases solve optimally; the 75- and 100-operation cases return feasible schedules at the 60 s budget. Pair reduction remains substantial but decreases for larger generated workloads because the generator intentionally combines a 50-operation dependent pipeline with independent fixed-slice operations to test full-duration non-overlap without making stream-pair constraints dominate the benchmark.
+The scalability study in @fig:scale reaches 100 operations. The 25- and 50-operation cases solve optimally; the 75- and 100-operation cases return feasible schedules at the 60 s budget. Pair reduction remains substantial but decreases for larger generated workloads because the generator intentionally combines a 50-operation dependent pipeline with independent fixed-slice operations to test full-duration non-overlap without making stream-pair constraints dominate the benchmark.
 
 #figure(
   placement: none,
