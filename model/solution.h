@@ -15,6 +15,11 @@ enum class SolveStatus {
   kNotSolved,
 };
 
+enum class SolverMode {
+  kBaseline,
+  kGraphPreprocessed,
+};
+
 struct OpAssignment {
   std::string id;
   std::string kind;
@@ -35,16 +40,27 @@ struct EdgeAssignment {
 };
 
 struct SolveResult {
+  SolverMode mode = SolverMode::kBaseline;
   SolveStatus status = SolveStatus::kNotSolved;
   double objective_value = 0.0;
   int makespan = 0;
   int variable_count = 0;
   int constraint_count = 0;
+  long long solve_time_ms = 0;
+  long long preprocess_time_ms = 0;
+  int total_op_pairs = 0;
+  int active_op_pairs = 0;
+  int pruned_op_pairs = 0;
+  double pair_reduction_rate = 0.0;
+  double average_issue_window = 0.0;
+  bool domain_check_ok = true;
+  std::vector<std::string> domain_check_errors;
   std::vector<OpAssignment> operations;
   std::vector<EdgeAssignment> edges;
 };
 
 std::string ToString(SolveStatus status);
+std::string ToString(SolverMode mode);
 
 }  // namespace dfg_ilp
 

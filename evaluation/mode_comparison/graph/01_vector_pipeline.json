@@ -1,0 +1,38 @@
+{
+  "mode": "graph_preprocessed",
+  "status": "optimal",
+  "objective_value": 14.000000,
+  "makespan": 14,
+  "variable_count": 788,
+  "constraint_count": 1233,
+  "solve_time_ms": 372,
+  "preprocess_time_ms": 0,
+  "preprocess": {
+    "total_op_pairs": 15,
+    "active_op_pairs": 0,
+    "pruned_op_pairs": 15,
+    "pair_reduction_rate": 1.000000,
+    "average_issue_window": 1987.000000
+  },
+  "domain_check": {
+    "ok": true,
+    "error_count": 0,
+    "errors": [
+    ]
+  },
+  "operations": [
+    {"id": "input_read", "kind": "memory", "dfunc": 1, "issue": 0, "finish": 1, "pos": -1},
+    {"id": "bias_add", "kind": "compute", "dfunc": 1, "issue": 3, "finish": 4, "pos": 0},
+    {"id": "relu", "kind": "compute", "dfunc": 1, "issue": 5, "finish": 6, "pos": 0},
+    {"id": "layer_norm", "kind": "compute", "dfunc": 2, "issue": 7, "finish": 9, "pos": 0},
+    {"id": "vec_scale", "kind": "compute", "dfunc": 1, "issue": 10, "finish": 11, "pos": 0},
+    {"id": "output_write", "kind": "memory", "dfunc": 1, "issue": 13, "finish": 14, "pos": -1}
+  ],
+  "edges": [
+    {"src": "input_read", "dst": "bias_add", "stream": 6, "direction": "east", "lo": -1, "hi": 0, "phase": 2},
+    {"src": "bias_add", "dst": "relu", "stream": 30, "direction": "west", "lo": 0, "hi": 0, "phase": 4},
+    {"src": "relu", "dst": "layer_norm", "stream": 14, "direction": "east", "lo": 0, "hi": 0, "phase": 6},
+    {"src": "layer_norm", "dst": "vec_scale", "stream": 18, "direction": "east", "lo": 0, "hi": 0, "phase": 9},
+    {"src": "vec_scale", "dst": "output_write", "stream": 25, "direction": "west", "lo": -1, "hi": 0, "phase": 11}
+  ]
+}

@@ -13,6 +13,7 @@ struct SolverConfig {
   std::string backend = "SCIP";
   int time_limit_ms = 30000;
   bool verify_solution = true;
+  SolverMode mode = SolverMode::kBaseline;
 };
 
 class IlpSolver {

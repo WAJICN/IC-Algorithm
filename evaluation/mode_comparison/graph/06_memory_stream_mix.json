@@ -1,0 +1,42 @@
+{
+  "mode": "graph_preprocessed",
+  "status": "optimal",
+  "objective_value": 111.000000,
+  "makespan": 111,
+  "variable_count": 1489,
+  "constraint_count": 2854,
+  "solve_time_ms": 1779,
+  "preprocess_time_ms": 0,
+  "preprocess": {
+    "total_op_pairs": 28,
+    "active_op_pairs": 2,
+    "pruned_op_pairs": 26,
+    "pair_reduction_rate": 0.928571,
+    "average_issue_window": 1890.000000
+  },
+  "domain_check": {
+    "ok": true,
+    "error_count": 0,
+    "errors": [
+    ]
+  },
+  "operations": [
+    {"id": "read_a", "kind": "memory", "dfunc": 1, "issue": 0, "finish": 1, "pos": 1},
+    {"id": "read_b", "kind": "memory", "dfunc": 1, "issue": 2, "finish": 3, "pos": 1},
+    {"id": "read_c", "kind": "memory", "dfunc": 1, "issue": 4, "finish": 5, "pos": 1},
+    {"id": "vec_add_ab", "kind": "compute", "dfunc": 1, "issue": 7, "finish": 8, "pos": 0},
+    {"id": "relu_ab", "kind": "compute", "dfunc": 1, "issue": 9, "finish": 10, "pos": 0},
+    {"id": "matmul_c", "kind": "compute", "dfunc": 3, "issue": 57, "finish": 60, "pos": 46},
+    {"id": "vec_add_final", "kind": "compute", "dfunc": 1, "issue": 107, "finish": 108, "pos": 0},
+    {"id": "final_write", "kind": "memory", "dfunc": 1, "issue": 110, "finish": 111, "pos": -1}
+  ],
+  "edges": [
+    {"src": "read_a", "dst": "read_b", "stream": 30, "direction": "west", "lo": 1, "hi": 1, "phase": 2},
+    {"src": "read_b", "dst": "read_c", "stream": 19, "direction": "east", "lo": 1, "hi": 1, "phase": 2},
+    {"src": "read_c", "dst": "vec_add_ab", "stream": 17, "direction": "west", "lo": 0, "hi": 1, "phase": 6},
+    {"src": "vec_add_ab", "dst": "relu_ab", "stream": 8, "direction": "east", "lo": 0, "hi": 0, "phase": 8},
+    {"src": "relu_ab", "dst": "matmul_c", "stream": 31, "direction": "east", "lo": 0, "hi": 46, "phase": 10},
+    {"src": "matmul_c", "dst": "vec_add_final", "stream": 16, "direction": "west", "lo": 0, "hi": 46, "phase": 106},
+    {"src": "vec_add_final", "dst": "final_write", "stream": 14, "direction": "west", "lo": -1, "hi": 0, "phase": 108}
+  ]
+}

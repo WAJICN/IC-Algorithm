@@ -1,0 +1,151 @@
+# Generated scalability workload with 100 operations.
+# First operations form a timing-valid pipeline; remaining ops are independent.
+op n000 memory 1 slices=-1,1
+op n001 compute 2 slices=0
+op n002 compute 3 slices=0
+op n003 compute 1 slices=0
+op n004 compute 2 slices=0
+op n005 compute 3 slices=0
+op n006 compute 1 slices=0
+op n007 compute 2 slices=0
+op n008 compute 3 slices=0
+op n009 compute 1 slices=0
+op n010 compute 2 slices=0
+op n011 compute 3 slices=0
+op n012 compute 1 slices=0
+op n013 compute 2 slices=0
+op n014 compute 3 slices=0
+op n015 compute 1 slices=0
+op n016 compute 2 slices=0
+op n017 compute 3 slices=0
+op n018 compute 1 slices=0
+op n019 compute 2 slices=0
+op n020 compute 3 slices=0
+op n021 compute 1 slices=0
+op n022 compute 2 slices=0
+op n023 compute 3 slices=0
+op n024 compute 1 slices=0
+op n025 compute 2 slices=0
+op n026 compute 3 slices=0
+op n027 compute 1 slices=0
+op n028 compute 2 slices=0
+op n029 compute 3 slices=0
+op n030 compute 1 slices=0
+op n031 compute 2 slices=0
+op n032 compute 3 slices=0
+op n033 compute 1 slices=0
+op n034 compute 2 slices=0
+op n035 compute 3 slices=0
+op n036 compute 1 slices=0
+op n037 compute 2 slices=0
+op n038 compute 3 slices=0
+op n039 compute 1 slices=0
+op n040 compute 2 slices=0
+op n041 compute 3 slices=0
+op n042 compute 1 slices=0
+op n043 compute 2 slices=0
+op n044 compute 3 slices=0
+op n045 compute 1 slices=0
+op n046 compute 2 slices=0
+op n047 compute 3 slices=0
+op n048 compute 1 slices=0
+op n049 memory 1 slices=-1,1
+op n050 compute 3 slices=0
+op n051 compute 1 slices=0
+op n052 compute 2 slices=0
+op n053 compute 3 slices=0
+op n054 compute 1 slices=0
+op n055 compute 2 slices=0
+op n056 compute 3 slices=0
+op n057 compute 1 slices=0
+op n058 compute 2 slices=0
+op n059 compute 3 slices=0
+op n060 compute 1 slices=0
+op n061 compute 2 slices=0
+op n062 compute 3 slices=0
+op n063 compute 1 slices=0
+op n064 compute 2 slices=0
+op n065 compute 3 slices=0
+op n066 compute 1 slices=0
+op n067 compute 2 slices=0
+op n068 compute 3 slices=0
+op n069 compute 1 slices=0
+op n070 compute 2 slices=0
+op n071 compute 3 slices=0
+op n072 compute 1 slices=0
+op n073 compute 2 slices=0
+op n074 compute 3 slices=0
+op n075 compute 1 slices=0
+op n076 compute 2 slices=0
+op n077 compute 3 slices=0
+op n078 compute 1 slices=0
+op n079 compute 2 slices=0
+op n080 compute 3 slices=0
+op n081 compute 1 slices=0
+op n082 compute 2 slices=0
+op n083 compute 3 slices=0
+op n084 compute 1 slices=0
+op n085 compute 2 slices=0
+op n086 compute 3 slices=0
+op n087 compute 1 slices=0
+op n088 compute 2 slices=0
+op n089 compute 3 slices=0
+op n090 compute 1 slices=0
+op n091 compute 2 slices=0
+op n092 compute 3 slices=0
+op n093 compute 1 slices=0
+op n094 compute 2 slices=0
+op n095 compute 3 slices=0
+op n096 compute 1 slices=0
+op n097 compute 2 slices=0
+op n098 compute 3 slices=0
+op n099 compute 1 slices=0
+edge n000 n001
+edge n001 n002
+edge n002 n003
+edge n003 n004
+edge n004 n005
+edge n005 n006
+edge n006 n007
+edge n007 n008
+edge n008 n009
+edge n009 n010
+edge n010 n011
+edge n011 n012
+edge n012 n013
+edge n013 n014
+edge n014 n015
+edge n015 n016
+edge n016 n017
+edge n017 n018
+edge n018 n019
+edge n019 n020
+edge n020 n021
+edge n021 n022
+edge n022 n023
+edge n023 n024
+edge n024 n025
+edge n025 n026
+edge n026 n027
+edge n027 n028
+edge n028 n029
+edge n029 n030
+edge n030 n031
+edge n031 n032
+edge n032 n033
+edge n033 n034
+edge n034 n035
+edge n035 n036
+edge n036 n037
+edge n037 n038
+edge n038 n039
+edge n039 n040
+edge n040 n041
+edge n041 n042
+edge n042 n043
+edge n043 n044
+edge n044 n045
+edge n045 n046
+edge n046 n047
+edge n047 n048
+edge n048 n049

@@ -20,4 +20,14 @@ std::string ToString(SolveStatus status) {
   return "unknown";
 }
 
+std::string ToString(SolverMode mode) {
+  switch (mode) {
+    case SolverMode::kBaseline:
+      return "baseline";
+    case SolverMode::kGraphPreprocessed:
+      return "graph_preprocessed";
+  }
+  return "unknown";
+}
+
 }  // namespace dfg_ilp

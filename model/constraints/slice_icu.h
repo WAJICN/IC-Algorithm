@@ -8,6 +8,8 @@
 namespace dfg_ilp {
 
 void AddSliceIcuConstraints(const Dfg& graph, const Hardware& hw,
+                            const std::vector<OpPairKey>& distance_pairs,
+                            const std::vector<OpPairKey>& resource_pairs,
                             VariableContext* vars);
 
 }  // namespace dfg_ilp

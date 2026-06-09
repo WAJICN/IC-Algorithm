@@ -6,6 +6,14 @@ add_executable(test_dfg_validator test_dfg_validator.cpp)
 target_link_libraries(test_dfg_validator PRIVATE dfg_ilp)
 add_test(NAME test_dfg_validator COMMAND test_dfg_validator)
 
+add_executable(test_preprocess test_preprocess.cpp)
+target_link_libraries(test_preprocess PRIVATE dfg_ilp)
+add_test(NAME test_preprocess COMMAND test_preprocess)
+
+add_executable(test_solution_checker test_solution_checker.cpp)
+target_link_libraries(test_solution_checker PRIVATE dfg_ilp)
+add_test(NAME test_solution_checker COMMAND test_solution_checker)
+
 add_executable(test_small_solve test_small_solve.cpp)
 target_link_libraries(test_small_solve PRIVATE dfg_ilp)
 add_test(NAME test_small_solve COMMAND test_small_solve)

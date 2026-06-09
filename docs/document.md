@@ -421,6 +421,58 @@ python3 visualization/schedule_route_plot.py \
   evaluation/figures/02_cnn_pipeline.svg
 ```
 
+Run the direct ILP baseline explicitly:
+
+```bash
+./build/solve evaluation/data/02_cnn_pipeline.dfg \
+  outputs/baseline/02_cnn_pipeline.json \
+  --mode baseline --time_limit_ms 90000
+```
+
+Run the graph-preprocessed ILP mode:
+
+```bash
+./build/solve evaluation/data/02_cnn_pipeline.dfg \
+  outputs/graph/02_cnn_pipeline.json \
+  --mode graph --time_limit_ms 90000
+```
+
+Run both modes for all evaluation workloads and write a CSV summary:
+
+```bash
+python3 evaluation/scripts/compare_modes.py
+```
+
+The comparison script writes:
+
+```text
+evaluation/mode_comparison/baseline/*.json
+evaluation/mode_comparison/graph/*.json
+evaluation/mode_comparison/summary.csv
+```
+
+Run the generated scalability evaluation:
+
+```bash
+python3 evaluation/scripts/run_scalability.py
+```
+
+The scalability run writes generated DFGs, graph-mode solutions, and a summary:
+
+```text
+evaluation/scalability/data/*.dfg
+evaluation/scalability/solutions/*.json
+evaluation/scalability/summary.csv
+```
+
+The default scalability sizes are `25,50,75,100` operations and the default time
+limit is 60000 ms. Override them with:
+
+```bash
+SIZES=25,50,75,100 TIME_LIMIT_MS=60000 \
+  python3 evaluation/scripts/run_scalability.py
+```
+
 Run tests:
 
 ```bash

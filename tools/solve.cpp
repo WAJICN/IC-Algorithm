@@ -13,7 +13,8 @@ namespace {
 
 void PrintUsage(const char* argv0) {
   std::cerr << "usage: " << argv0
-            << " <input.dfg> <output.json> [--time_limit_ms N] [--solver NAME]\n";
+            << " <input.dfg> <output.json> [--time_limit_ms N] [--solver NAME]"
+               " [--mode baseline|graph]\n";
 }
 
 bool ParseInt(const std::string& text, int* value) {
@@ -28,6 +29,19 @@ bool ParseInt(const std::string& text, int* value) {
   } catch (...) {
     return false;
   }
+}
+
+bool ParseSolverMode(const std::string& text, dfg_ilp::SolverMode* mode) {
+  if (text == "baseline" || text == "pure-ilp" || text == "pure_ilp") {
+    *mode = dfg_ilp::SolverMode::kBaseline;
+    return true;
+  }
+  if (text == "graph" || text == "graph-preprocessed" ||
+      text == "graph_preprocessed") {
+    *mode = dfg_ilp::SolverMode::kGraphPreprocessed;
+    return true;
+  }
+  return false;
 }
 
 }  // namespace
@@ -55,6 +69,11 @@ int main(int argc, char** argv) {
         return EXIT_FAILURE;
       }
       config.backend = argv[++i];
+    } else if (arg == "--mode") {
+      if (i + 1 >= argc || !ParseSolverMode(argv[++i], &config.mode)) {
+        std::cerr << "--mode expects baseline or graph\n";
+        return EXIT_FAILURE;
+      }
     } else if (arg == "--no_verify") {
       config.verify_solution = false;
     } else {
@@ -89,10 +108,14 @@ int main(int argc, char** argv) {
       return EXIT_FAILURE;
     }
 
-    std::cout << "status=" << dfg_ilp::ToString(result.status)
+    std::cout << "mode=" << dfg_ilp::ToString(result.mode)
+              << " status=" << dfg_ilp::ToString(result.status)
               << " makespan=" << result.makespan
               << " vars=" << result.variable_count
-              << " constraints=" << result.constraint_count << '\n';
+              << " constraints=" << result.constraint_count
+              << " solve_ms=" << result.solve_time_ms
+              << " pair_reduction=" << result.pruned_op_pairs << '/'
+              << result.total_op_pairs << '\n';
     if (result.status != dfg_ilp::SolveStatus::kOptimal &&
         result.status != dfg_ilp::SolveStatus::kFeasible) {
       return EXIT_FAILURE;
