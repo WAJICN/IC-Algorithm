@@ -24,12 +24,12 @@ def setup_style():
     plt.style.use("default")
     plt.rcParams.update(
         {
-            "font.size": 8.5,
-            "axes.labelsize": 10,
-            "axes.titlesize": 9,
-            "xtick.labelsize": 8.5,
-            "ytick.labelsize": 8.5,
-            "legend.fontsize": 8,
+            "font.size": 9.5,
+            "axes.labelsize": 11.5,
+            "axes.titlesize": 10,
+            "xtick.labelsize": 9.5,
+            "ytick.labelsize": 9.5,
+            "legend.fontsize": 9,
             "font.family": "sans-serif",
             "font.sans-serif": FONT_FAMILY,
             "hatch.linewidth": 0.8,
